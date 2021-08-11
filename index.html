@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/justValidateTooltip.min.css">
+    <link rel="stylesheet" href="styles/swiper-bundle.min.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>SitDownPls</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header__top-row">
+            <div class="header__top-row-content container">
+                <div class="header__top-row-left-column">
+                    <div class="header__top-row-region">
+                        <p class="header__top-row-region-text">Ваш регион: </p>
+                        <p class="header__top-row-region-text-choice" tabindex="0" aria-label="Открыть список городов">Москва</p>
+                        <ul class="header__top-row-region-list visually-hidden">
+                            <li class="header__top-row-region-list-item">Казань</li>
+                            <li class="header__top-row-region-list-item">Уфа</li>
+                            <li class="header__top-row-region-list-item">Пермь</li>
+                        </ul>
+                    </div>
+                    <a href="tel:84958854547" class="header__top-row-tel">
+                        +7 (495) 885-45-47
+                    </a>
+                </div>
+                <div class="header__top-row-right-column">
+                    <ul class="header__top-row-list">
+                        <li class="header__top-row-list-item">
+                            <a href="#" class="header__top-row-list-item-link">
+                                О компании
+                            </a>
+                        </li>
+                        <li class="header__top-row-list-item">
+                            <a href="#" class="header__top-row-list-item-link">
+                                Гарантия и возврат
+                            </a>
+                        </li>
+                        <li class="header__top-row-list-item">
+                            <a href="#" class="header__top-row-list-item-link">
+                                Корпоративным клиентам
+                            </a>
+                        </li>
+                        <li class="header__top-row-list-item">
+                            <a href="#" class="header__top-row-list-item-link">
+                                Дизайн-решение
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="header__bot-row">
+            <div class="header__bot-row-content container">
+                <a href="#" class="header__bot-row-logo-link">
+                    <img class="header__bot-row-logo" src="./img/logo.png"/>
+                </a>
+                <ul class="header__bot-row-list">
+                    <li class="header__bot-row-list-item">
+                        <a href="#" class="header__bot-row-list-item-link">
+                            Каталог
+                        </a>
+                    </li>
+                    <li class="header__bot-row-list-item">
+                        <a href="#" class="header__bot-row-list-item-link">
+                            Магазины
+                        </a>
+                    </li>
+                    <li class="header__bot-row-list-item">
+                        <a href="#" class="header__bot-row-list-item-link">
+                            Шоу-рум
+                        </a>
+                    </li>
+                    <li class="header__bot-row-list-item">
+                        <a href="#" class="header__bot-row-list-item-link">
+                            Доставка и оплата
+                        </a>
+                    </li>
+                    <li class="header__bot-row-list-item">
+                        <a href="#" class="header__bot-row-list-item-link">
+                            Дисконт
+                        </a>
+                    </li>
+                    <li class="header__bot-row-list-item">
+                        <a href="#" class="header__bot-row-list-item-link">
+                            Контакты
+                        </a>
+                    </li>
+                </ul>
+                <form class="header__bot-row-form">
+                    <input type="text" class="header__bot-row-form-input" placeholder="Я хочу купить..."/>
+                    <button class="header__bot-row-form-search-btn"></button>
+                    <button class="header__bot-row-form-category-btn">
+                        Категория
+                    </button>
+                    <ul class="header__bot-row-form-list visually-hidden">
+                        <li class="header__bot-row-form-list-item">Диваны</li>
+                        <li class="header__bot-row-form-list-item">Кресла</li>
+                        <li class="header__bot-row-form-list-item">Пуфы</li>
+                        <li class="header__bot-row-form-list-item">Кровати</li>
+                        <li class="header__bot-row-form-list-item">Тумбы</li>
+                        <li class="header__bot-row-form-list-item">Комоды</li>
+                        <li class="header__bot-row-form-list-item">Стулья</li>
+                        <li class="header__bot-row-form-list-item">Столы</li>
+                        <li class="header__bot-row-form-list-item">Аксессуары</li>
+                    </ul>
+                </form>
+                <div class="header__bot-row-account">
+                    <button class="header__bot-row-account-enter"></button>
+                    <button class="header__bot-row-account-cart"></button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <h1 class="visually-hidden">Сайт компании SitDownPls</h1>
+        <section class="main__front-banner">
+            <h2 class="visually-hidden">Главный баннер</h2>
+            <div class="main__front-banner-swiper swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="main__front-banner-slide swiper-slide">
+                        <div class="main__front-banner-content container">
+                            <h2 class="main__front-banner-text">
+                                Скидка 15% на первую покупку
+                            </h2>
+                            <button class="main__front-banner-btn">
+                                Получить!
+                            </button>
+                        </div>
+                    </div>
+                    <div class="main__front-banner-slide swiper-slide">
+                        <div class="main__front-banner-content container">
+                            <h2 class="main__front-banner-text">
+                                1000+ аксессуаров для дома
+                            </h2>
+                            <button class="main__front-banner-btn">
+                                Поробнее
+                            </button>
+                        </div>
+                    </div>
+                    <div class="main__front-banner-slide swiper-slide">
+                        <div class="main__front-banner-content container">
+                            <h2 class="main__front-banner-text">
+                                Коллекция стильного и яркого текстиля
+                            </h2>
+                            <button class="main__front-banner-btn">
+                                Подробнее
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="main__special container">
+            <h2 class="main__special-title">Специальные предложения</h2>
+            <div class="main__special-swiper-nav">
+                <button class="main__special-swiper-nav-arrow special-arrow-left"></button>
+                <button class="main__special-swiper-nav-arrow special-arrow-right"></button>
+            </div>
+            <div class="main__special-swiper swiper-container">
+                <ul class="main__special-list swiper-wrapper">
+                    <li class="main__special-list-item swiper-slide">
+                        <p class="main__special-list-item-discount">- 9 000</p>
+                        <img src="img/special-1.png" class="main__special-list-item-img" alt="Картинка в товаре">
+                        <div class="main__special-list-item-description">
+                            <p class="main__special-list-item-description-name">
+                                Кресло велюровое "X-24"
+                            </p>
+                            <p class="main__special-list-item-description-price">
+                                15 990 руб <span class="price-old">24 990 руб</span>
+                            </p>
+                            <button class="main__special-list-item-description-btn">
+                                Купить
+                            </button>
+                        </div>
+                    </li>
+                    <li class="main__special-list-item swiper-slide">
+                        <p class="main__special-list-item-discount">- 10 000</p>
+                        <img src="img/special-2.png" class="main__special-list-item-img" alt="Картинка в товаре">
+                        <div class="main__special-list-item-description">
+                            <p class="main__special-list-item-description-name">
+                                Диван тканевый "Z-44"
+                            </p>
+                            <p class="main__special-list-item-description-price">
+                                22 990 руб <span class="price-old">32 990 руб</span>
+                            </p>
+                            <button class="main__special-list-item-description-btn">
+                                Купить
+                            </button>
+                        </div>
+                    </li>
+                    <li class="main__special-list-item swiper-slide">
+                        <p class="main__special-list-item-discount">- 600</p>
+                        <img src="img/special-3.png" class="main__special-list-item-img" alt="Картинка в товаре">
+                        <div class="main__special-list-item-description">
+                            <p class="main__special-list-item-description-name">
+                                Будильник "Quartz-23"
+                            </p>
+                            <p class="main__special-list-item-description-price">
+                                1 290 руб <span class="price-old">1 890 руб</span>
+                            </p>
+                            <button class="main__special-list-item-description-btn">
+                                Купить
+                            </button>
+                        </div>
+                    </li>
+                    <li class="main__special-list-item swiper-slide">
+                        <p class="main__special-list-item-discount">- 300</p>
+                        <img src="img/special-4.png" class="main__special-list-item-img" alt="Картинка в товаре">
+                        <div class="main__special-list-item-description">
+                            <p class="main__special-list-item-description-name">
+                                Мини скульптура "Oh my deer"
+                            </p>
+                            <p class="main__special-list-item-description-price">
+                                690 руб <span class="price-old">990 руб</span>
+                            </p>
+                            <button class="main__special-list-item-description-btn">
+                                Купить
+                            </button>
+                        </div>
+                    </li>
+                    <li class="main__special-list-item swiper-slide">
+                        <p class="main__special-list-item-discount">- 10 000</p>
+                        <img src="img/special-5.png" class="main__special-list-item-img" alt="Картинка в товаре">
+                        <div class="main__special-list-item-description">
+                            <p class="main__special-list-item-description-name">
+                                Диван вел-флок "Z-85"
+                            </p>
+                            <p class="main__special-list-item-description-price">
+                                22 990 руб <span class="price-old">32 990 руб</span>
+                            </p>
+                            <button class="main__special-list-item-description-btn">
+                                Купить
+                            </button>
+                        </div>
+                    </li>
+                    <li class="main__special-list-item swiper-slide">
+                        <p class="main__special-list-item-discount">- 700</p>
+                        <img src="img/special-6.png" class="main__special-list-item-img" alt="Картинка в товаре">
+                        <div class="main__special-list-item-description">
+                            <p class="main__special-list-item-description-name">
+                                Термометр + гидрометр "H-18"
+                            </p>
+                            <p class="main__special-list-item-description-price">
+                                1 390 руб <span class="price-old">2 090 руб</span>
+                            </p>
+                            <button class="main__special-list-item-description-btn">
+                                Купить
+                            </button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="main__highrate container">
+            <h2 class="main__highrate-title">Высокий рейтинг</h2>
+            <ul class="main__highrate-list">
+                <li class="main__highrate-list-item">
+                    <p class="main__highrate-list-item-rate">5,0</p>
+                    <img src="img/highrate-1.png" class="main__highrate-list-item-img" alt="Картинка в товаре">
+                    <div class="main__highrate-list-item-description">
+                        <p class="main__highrate-list-item-description-name">
+                            Диван кожаный "R-94"
+                        </p>
+                        <p class="main__highrate-list-item-description-price">
+                            94 990 руб
+                        </p>
+                        <button class="main__highrate-list-item-description-btn">
+                            Купить
+                        </button>
+                    </div>
+                </li>
+                <li class="main__highrate-list-item">
+                    <p class="main__highrate-list-item-rate">4,9</p>
+                    <img src="img/highrate-2.png" class="main__highrate-list-item-img" alt="Картинка в товаре">
+                    <div class="main__highrate-list-item-description">
+                        <p class="main__highrate-list-item-description-name">
+                            Диван апартековый "T-75"
+                        </p>
+                        <p class="main__highrate-list-item-description-price">
+                            69 990 руб
+                        </p>
+                        <button class="main__highrate-list-item-description-btn">
+                            Купить
+                        </button>
+                    </div>
+                </li>
+                <li class="main__highrate-list-item">
+                    <p class="main__highrate-list-item-rate">4,8</p>
+                    <img src="img/highrate-3.png" class="main__highrate-list-item-img" alt="Картинка в товаре">
+                    <div class="main__highrate-list-item-description">
+                        <p class="main__highrate-list-item-description-name">
+                            Диван тканевый "D-31"
+                        </p>
+                        <p class="main__highrate-list-item-description-price">
+                            28 490 руб
+                        </p>
+                        <button class="main__highrate-list-item-description-btn">
+                            Купить
+                        </button>
+                    </div>
+                </li>
+                <li class="main__highrate-list-item">
+                    <p class="main__highrate-list-item-rate">4,8</p>
+                    <img src="img/highrate-4.png" class="main__highrate-list-item-img" alt="Картинка в товаре">
+                    <div class="main__highrate-list-item-description">
+                        <p class="main__highrate-list-item-description-name">
+                            Диван велюровый "Y-68"
+                        </p>
+                        <p class="main__highrate-list-item-description-price">
+                            22 990 руб
+                        </p>
+                        <button class="main__highrate-list-item-description-btn">
+                            Купить
+                        </button>
+                    </div>
+                </li>
+                <li class="main__highrate-list-item">
+                    <p class="main__highrate-list-item-rate">4,8</p>
+                    <img src="img/highrate-5.png" class="main__highrate-list-item-img" alt="Картинка в товаре">
+                    <div class="main__highrate-list-item-description">
+                        <p class="main__highrate-list-item-description-name">
+                            Диван из шинила "W-95"
+                        </p>
+                        <p class="main__highrate-list-item-description-price">
+                            22 990 руб
+                        </p>
+                        <button class="main__highrate-list-item-description-btn">
+                            Купить
+                        </button>
+                    </div>
+                </li>
+                <li class="main__highrate-list-item">
+                    <p class="main__highrate-list-item-rate">4,8</p>
+                    <img src="img/highrate-6.png" class="main__highrate-list-item-img" alt="Картинка в товаре">
+                    <div class="main__highrate-list-item-description">
+                        <p class="main__highrate-list-item-description-name">
+                            Диван флоковый "G-41"
+                        </p>
+                        <p class="main__highrate-list-item-description-price">
+                            17 990 руб
+                        </p>
+                        <button class="main__highrate-list-item-description-btn">
+                            Купить
+                        </button>
+                    </div>
+                </li>
+                <li class="main__highrate-list-item">
+                    <p class="main__highrate-list-item-rate">4,8</p>
+                    <img src="img/highrate-7.png" class="main__highrate-list-item-img" alt="Картинка в товаре">
+                    <div class="main__highrate-list-item-description">
+                        <p class="main__highrate-list-item-description-name">
+                            Диван шиниловый "V-43"
+                        </p>
+                        <p class="main__highrate-list-item-description-price">
+                            19 990 руб
+                        </p>
+                        <button class="main__highrate-list-item-description-btn">
+                            Купить
+                        </button>
+                    </div>
+                </li>
+                <li class="main__highrate-list-item">
+                    <p class="main__highrate-list-item-rate">4,7</p>
+                    <img src="img/highrate-8.png" class="main__highrate-list-item-img" alt="Картинка в товаре">
+                    <div class="main__highrate-list-item-description">
+                        <p class="main__highrate-list-item-description-name">
+                            Диван велюровый "S-99"
+                        </p>
+                        <p class="main__highrate-list-item-description-price">
+                            19 990 руб
+                        </p>
+                        <button class="main__highrate-list-item-description-btn">
+                            Купить
+                        </button>
+                    </div>
+                </li>
+                <li class="main__highrate-list-item">
+                    <p class="main__highrate-list-item-rate">5,0</p>
+                    <img src="img/highrate-1.png" class="main__highrate-list-item-img" alt="Картинка в товаре">
+                    <div class="main__highrate-list-item-description">
+                        <p class="main__highrate-list-item-description-name">
+                            Диван кожаный "R-94"
+                        </p>
+                        <p class="main__highrate-list-item-description-price">
+                            94 990 руб
+                        </p>
+                        <button class="main__highrate-list-item-description-btn">
+                            Купить
+                        </button>
+                    </div>
+                </li>
+                <li class="main__highrate-list-item">
+                    <p class="main__highrate-list-item-rate">4,9</p>
+                    <img src="img/highrate-2.png" class="main__highrate-list-item-img" alt="Картинка в товаре">
+                    <div class="main__highrate-list-item-description">
+                        <p class="main__highrate-list-item-description-name">
+                            Диван апартековый "T-75"
+                        </p>
+                        <p class="main__highrate-list-item-description-price">
+                            69 990 руб
+                        </p>
+                        <button class="main__highrate-list-item-description-btn">
+                            Купить
+                        </button>
+                    </div>
+                </li>
+                <li class="main__highrate-list-item">
+                    <p class="main__highrate-list-item-rate">4,8</p>
+                    <img src="img/highrate-3.png" class="main__highrate-list-item-img" alt="Картинка в товаре">
+                    <div class="main__highrate-list-item-description">
+                        <p class="main__highrate-list-item-description-name">
+                            Диван тканевый "D-31"
+                        </p>
+                        <p class="main__highrate-list-item-description-price">
+                            28 490 руб
+                        </p>
+                        <button class="main__highrate-list-item-description-btn">
+                            Купить
+                        </button>
+                    </div>
+                </li>
+                <li class="main__highrate-list-item">
+                    <p class="main__highrate-list-item-rate">4,8</p>
+                    <img src="img/highrate-4.png" class="main__highrate-list-item-img" alt="Картинка в товаре">
+                    <div class="main__highrate-list-item-description">
+                        <p class="main__highrate-list-item-description-name">
+                            Диван велюровый "Y-68"
+                        </p>
+                        <p class="main__highrate-list-item-description-price">
+                            22 990 руб
+                        </p>
+                        <button class="main__highrate-list-item-description-btn">
+                            Купить
+                        </button>
+                    </div>
+                </li>
+            </ul>
+            <button class="main__highrate-btn">Смотреть больше товаров</button>
+        </section>
+        <section class="main__middle-banner">
+            <h2 class="visually-hidden">Баннер по центру</h2>
+            <div class="main__middle-banner-content container">
+                <div class="main__middle-banner-description">
+                    <p class="main__middle-banner-text">
+                        Оксфорд 1950
+                    </p>
+                    <p class="main__middle-banner-smalltext">
+                        Новая коллекция изысканных кресел
+                    </p>
+                    <button class="main__middle-banner-btn">Ознакомиться</button>
+                </div>
+            </div>
+        </section>
+        <section class="main__categories container">
+            <h2 class="main__categories-title">Топ категории</h2>
+            <ul class="main__categories-list">
+                <li class="main__categories-list-item">
+                    <ul class="main__categories-list-item-types">
+                        <li class="main__categories-list-item-types-type">Прямые</li>
+                        <li class="main__categories-list-item-types-type">Угловые</li>
+                        <li class="main__categories-list-item-types-type">Модульные</li>
+                    </ul>
+                    <p class="main__categories-list-item-title">Диваны</p>
+                    <img src="img/categories-sofa.png" alt="Картинка в категориях" class="main__categories-list-item-img">
+                    <a href="#" class="main__categories-list-item-link">В каталог <button class="link-arrow"></button></a>
+                </li>
+                <li class="main__categories-list-item">
+                    <ul class="main__categories-list-item-types">
+                        <li class="main__categories-list-item-types-type">Мягкие</li>
+                        <li class="main__categories-list-item-types-type">Кресла-кровати</li>
+                    </ul>
+                    <p class="main__categories-list-item-title">Кресла</p>
+                    <img src="img/categories-armchair.png" alt="Картинка в категориях" class="main__categories-list-item-img">
+                    <a href="#" class="main__categories-list-item-link">В каталог <button class="link-arrow"></button></a>
+                </li>
+                <li class="main__categories-list-item">
+                    <ul class="main__categories-list-item-types">
+                        <li class="main__categories-list-item-types-type">Односпальные</li>
+                        <li class="main__categories-list-item-types-type">Двуспальные</li>
+                    </ul>
+                    <p class="main__categories-list-item-title">Кровати</p>
+                    <img src="img/categories-bed.png" alt="Картинка в категориях" class="main__categories-list-item-img">
+                    <a href="#" class="main__categories-list-item-link">В каталог <button class="link-arrow"></button></a>
+                </li>
+                <li class="main__categories-list-item">
+                    <ul class="main__categories-list-item-types">
+                        <li class="main__categories-list-item-types-type">Тумбы</li>
+                        <li class="main__categories-list-item-types-type">Комоды</li>
+                    </ul>
+                    <p class="main__categories-list-item-title">Тумбы и комоды</p>
+                    <img src="img/categories-dresser.png" alt="Картинка в категориях" class="main__categories-list-item-img">
+                    <a href="#" class="main__categories-list-item-link">В каталог <button class="link-arrow"></button></a>
+                </li>
+                <li class="main__categories-list-item">
+                    <ul class="main__categories-list-item-types">
+                        <li class="main__categories-list-item-types-type">Деревянные</li>
+                        <li class="main__categories-list-item-types-type">Металлокаркас</li>
+                    </ul>
+                    <p class="main__categories-list-item-title">Стулья</p>
+                    <img src="img/categories-chair.png" alt="Картинка в категориях" class="main__categories-list-item-img">
+                    <a href="#" class="main__categories-list-item-link">В каталог <button class="link-arrow"></button></a>
+                </li>
+            </ul>
+        </section>
+        <section class="main__useful container">
+            <h2 class="main__useful-title">Полезное</h2>
+            <div class="main__useful-swiper-nav">
+                <button class="main__useful-swiper-nav-arrow useful-arrow-left"></button>
+                <button class="main__useful-swiper-nav-arrow useful-arrow-right"></button>
+            </div>
+            <div class="main__useful-swiper swiper-container">
+                <ul class="main__useful-list swiper-wrapper">
+                    <li class="main__useful-list-item swiper-slide">
+                        <img src="img/useful-1.png" class="main__useful-list-item-img" alt="Картинка в полезном">
+                        <div class="main__useful-list-item-description">
+                            <p class="main__useful-list-item-description-text">
+                                И нет сомнений, что сделанные на базе интернет-аналитики выводы представляют собой не что иное?
+                            </p>
+                            <button class="main__useful-list-item-description-btn">
+                                Читать
+                            </button>
+                        </div>
+                    </li>
+                    <li class="main__useful-list-item swiper-slide">
+                        <img src="img/useful-2.png" class="main__useful-list-item-img" alt="Картинка в полезном">
+                        <div class="main__useful-list-item-description">
+                            <p class="main__useful-list-item-description-text">
+                                Как принято считать, некоторые особенности приносят несомненную пользу обществу?                            </p>
+                            <button class="main__useful-list-item-description-btn">
+                                Читать
+                            </button>
+                        </div>
+                    </li>
+                    <li class="main__useful-list-item swiper-slide">
+                        <img src="img/useful-3.png" class="main__useful-list-item-img" alt="Картинка в полезном">
+                        <div class="main__useful-list-item-description">
+                            <p class="main__useful-list-item-description-text">
+                                Ясность нашей позиции очевидна: укрепление и развитие внутренней структуры?                            </p>
+                            <button class="main__useful-list-item-description-btn">
+                                Читать
+                            </button>
+                        </div>
+                    </li>
+                    <li class="main__useful-list-item swiper-slide">
+                        <img src="img/useful-4.png" class="main__useful-list-item-img" alt="Картинка в полезном">
+                        <div class="main__useful-list-item-description">
+                            <p class="main__useful-list-item-description-text">
+                                Прежде всего, консультация с широким активом однозначно фиксирует необходимость распределения?                            </p>
+                            <button class="main__useful-list-item-description-btn">
+                                Читать
+                            </button>
+                        </div>
+                    </li>
+                    <li class="main__useful-list-item swiper-slide">
+                        <img src="img/useful-5.png" class="main__useful-list-item-img" alt="Картинка в полезном">
+                        <div class="main__useful-list-item-description">
+                            <p class="main__useful-list-item-description-text">
+                                Как принято считать, некоторые особенности приносят несомненную пользу обществу?                            </p>
+                            <button class="main__useful-list-item-description-btn">
+                                Читать
+                            </button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="main__contactus container">
+            <h2 class="main__contactus-title">Мы всегда вам рады!</h2>
+            <div class="main__contactus-content">
+                <form action="mail.php" enctype="multipart/form-data" class="main__contactus-form js-form" method="POST">
+                    <input class="visually-hidden" name="admin_email[]" value="ohthatorh@yandex.ru">
+                    <input class="visually-hidden" name="form_subject" value="Заказать звонок">
+                    <p class="main__contactus-content-text">
+                        Безусловно, новая модель организационной деятельности в значительной степени обусловливает важность распределения внутренних резервов и ресурсов.
+                        <span class="main__contactus-content-tooltip"></span>
+                    </p>
+                    <div class="just-validate-tooltip-container">
+                       <input class="main__contactus-form-input" id="name" name="name" type="text" placeholder="Как вас зовут?" data-validate-field="name">
+                    </div>
+                    <div class="just-validate-tooltip-container">
+                        <input class="main__contactus-form-input" id="tel" name="tel" type="tel" placeholder="Ваш телефон" data-validate-field="tel">
+                     </div>
+                    <div class="just-validate-tooltip-container">
+                       <input class="main__contactus-form-input" id="email" name="email" type="email" placeholder="Ваш e-mail" data-validate-field="email">
+                    </div>
+                    <button class="main__contactus-form-button">
+                        Отправить
+                    </button>
+                    <div class="just-validate-tooltip-container">
+                        <label class="main__contactus-form-checkbox checkbox__label">
+                            <input type="checkbox" name="checkbox" class="checkbox visually-hidden" checked required data-validate-field="checkbox">
+                            <span class="checkbox__span">    
+                                Принимаю&nbsp;<a href="#" class="main__contactus-form-checkbox-link">пользовательское соглашение</a>
+                            </span>
+                        </label>
+                    </div>
+                 </form>
+                <img class="main__contactus-img" src="img/contactus.png" alt="Картинка в контактах">
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer__content container">
+            <div class="footer__content-left-column">
+                <img src="img/logo.png" alt="Логотип" class="footer__content-logo">
+                <ul class="footer__content-social-list">
+                    <li class="footer__content-social-list-item">
+                        <a href="#" class="footer__content-social-list-item-link facebook"></a>
+                    </li>
+                    <li class="footer__content-social-list-item">
+                        <a href="#" class="footer__content-social-list-item-link vk"></a>
+                    </li>
+                    <li class="footer__content-social-list-item">
+                        <a href="#" class="footer__content-social-list-item-link instagram"></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer__content-right-column">
+                <ul class="footer__content-right-column-list">
+                    <li class="footer__content-right-column-list-item">
+                        О нас
+                    </li>
+                    <li class="footer__content-right-column-list-item">
+                        <a href="#" class="footer__content-right-column-list-item-link">
+                            О компании
+                        </a>
+                    </li>
+                    <li class="footer__content-right-column-list-item">
+                        <a href="#" class="footer__content-right-column-list-item-link">
+                            Блог
+                        </a>
+                    </li>
+                </ul>
+                <ul class="footer__content-right-column-list">
+                    <li class="footer__content-right-column-list-item">
+                        Услуги
+                    </li>
+                    <li class="footer__content-right-column-list-item">
+                        <a href="#" class="footer__content-right-column-list-item-link">
+                            Доставка
+                        </a>
+                    </li>
+                    <li class="footer__content-right-column-list-item">
+                        <a href="#" class="footer__content-right-column-list-item-link">
+                            Рассрочка и кредит
+                        </a>
+                    </li>
+                    <li class="footer__content-right-column-list-item">
+                        <a href="#" class="footer__content-right-column-list-item-link">
+                            Сборка и установка
+                        </a>
+                    </li>
+                </ul>
+                <ul class="footer__content-right-column-list">
+                    <li class="footer__content-right-column-list-item">
+                        Связь с нами
+                    </li>
+                    <li class="footer__content-right-column-list-item">
+                        <a href="#" class="footer__content-right-column-list-item-link">
+                            Обратная связь
+                        </a>
+                    </li>
+                    <li class="footer__content-right-column-list-item">
+                        <a href="#" class="footer__content-right-column-list-item-link">
+                            Контакты
+                        </a>
+                    </li>
+                </ul>
+                <ul class="footer__content-right-column-list">
+                    <li class="footer__content-right-column-list-item">
+                        Сотрудничество
+                    </li>
+                    <li class="footer__content-right-column-list-item">
+                        <a href="#" class="footer__content-right-column-list-item-link">
+                            Поставщикам
+                        </a>
+                    </li>
+                    <li class="footer__content-right-column-list-item">
+                        <a href="#" class="footer__content-right-column-list-item-link">
+                            Оптовикам
+                        </a>
+                    </li>
+                    <li class="footer__content-right-column-list-item">
+                        <a href="#" class="footer__content-right-column-list-item-link">
+                            Карьера
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer__copyright">
+            <p class="footer__copyright-text">
+                SDP&reg; &nbsp;2011-2021
+            </p>
+        </div>
+    </footer>
+    <script src="scripts/swiper-bundle.min.js"></script>
+    <script src="scripts/just-validate.min.js"></script>
+    <script src="scripts/inputmask.min.js"></script>
+    <script src="scripts/form.js"></script>
+    <script src="scripts/choices.js"></script>
+    <script src="scripts/swipers.js"></script>
+    <script src="scripts/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,311 @@
+.header {
+    &__top-row {
+        padding: 17px 0;
+        background-color: $greyLightColor;
+        &-content {
+            display: grid;
+            grid-template-columns: 355px 710px;
+            align-items: center;
+            justify-content: space-between;
+        }
+        &-left-column {
+            display: grid;
+            grid-template-columns: 178px 143px;
+            align-items: center;
+            justify-content: space-between;
+        }
+        &-region {
+            position: relative;
+            display: grid;
+            grid-template-columns: 98px 80px;
+            &-text {
+                @include clearStyles;
+                &-choice {
+                    @include clearStyles;
+                    position: relative;
+                    color: $primaryColor;
+                    transition: color .2s ease, background .2s ease;
+                    cursor: pointer;
+                    &:hover {
+                        color: $primaryLightColor;
+                        &::before {
+                            border-color: $primaryLightColor;
+                        }
+                    }
+                    &:focus {
+                        background-color: $pinkVioletColor;
+                        outline: none;
+                    }
+                    &:active {
+                        background-color: unset;
+                        color: $primaryShadeColor;
+                        &::before {
+                            border-color: $primaryShadeColor;
+                        }
+                    }
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        top: 5px;
+                        right: 10px;
+                        width: 6px;
+                        height: 6px;
+                        border-top: 1px solid $primaryColor;
+                        border-right: 1px solid $primaryColor;
+                        transform: rotate(135deg);
+                        transition: border .2s ease;
+                    }
+                    &.choice-active {
+                        background-color: unset;
+                        &::before {
+                            top: 8px;
+                            transform: rotate(315deg);
+                        }
+                    }
+                }
+            }
+            &-list {
+                @include stylesForList;
+                position: absolute;
+                top: 25px;
+                right: 8px;
+                width: 84px;
+                height: 114px;
+                padding: 16px;
+                border: 2px solid $greyLightColor;
+                background-color: $whiteColor;
+                z-index: 1;
+                &-item {
+                    font-size: 14px;
+                    transition: color .2s ease;
+                    cursor: pointer;
+                    &:hover {
+                        color: $primaryColor;
+                    }
+                    &:not(:last-child) {
+                        margin-bottom: 11px;
+                    }
+                }
+            }
+        }
+        &-tel {
+            @include stylesForLink;
+            padding-left: 20px;
+            background-image: url('../img/phone.svg');
+            background-repeat: no-repeat;
+            background-position: left center;
+            font-size: 14px;
+            color: $secondaryColor;
+            transition: color .2s ease, background .2s ease;
+            &:hover {
+                background-image: url('../img/phone-hover.svg');
+                color: $secondaryLightColor;
+            }
+            &:focus {
+                outline: none;
+                background-color: $boneColor;
+            }
+            &:active {
+                background-image: url('../img/phone-active.svg');
+                background-color: unset;
+                color: $secondaryShadeColor;
+            }
+        }
+        &-list {
+            @include stylesForList;
+            display: grid;
+            grid-template-columns: 84px 134px 182px 118px;
+            grid-column-gap: 64px;
+            &-item {
+                &-link {
+                    @include stylesForMainLink;
+                    font-size: 14px;
+                    color: $greyColor;
+                }
+            }
+        }
+    }
+    &__bot-row {
+        padding: 30px 0;
+        &-logo {
+            cursor: pointer;
+            transition: opacity .2s ease;
+            &:hover {
+                opacity: .5;
+            }
+        }
+        &-content {
+            display: grid;
+            align-items: center;
+            grid-template-columns: repeat(11, 1fr);
+            grid-row-gap: 30px;
+            grid-column-gap: 30px;
+        }
+        &-list {
+            @include stylesForList;
+            display: grid;
+            grid-template-columns: 61px 80px 70px 144px 65px 75px;
+            gap: 91px;
+            grid-column: 3/12;
+            &-item {
+                transition: opacity .2s ease;
+                &:hover {
+                    opacity: .5;
+                }
+                &-link {
+                    @include stylesForMainLink;
+                    color: $blackColor;
+                }
+            }
+        }
+        &-form {
+            position: relative;
+            grid-column: 1/10;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            align-items: center;
+            &-input {
+                @include stylesForMainInput;
+                width: 762px;
+                padding: 19px 57px;
+                border-radius: 10px 0px 0px 10px;
+                background-image: url('../img/search.svg');
+                background-repeat: no-repeat;
+                background-position: 32px center;
+                &:focus {
+                    background-image: url('../img/search-active.svg');
+                }
+            }
+            &-search-btn {
+                @include stylesForBtnArrow;
+                position: absolute;
+                top: 13px;
+                right: 327px;
+            }
+            &-category-btn {
+                @include stylesForButton;
+                position: relative;
+                padding: 19px 32px;
+                border: 2px solid $greyLightColor;
+                border-radius: 0px 10px 10px 0px;
+                text-align: left;
+                color: $primaryColor;
+                transition: border .2s ease;
+                z-index: 3;
+                &:hover {
+                    border-color: $primaryColor;
+                }
+                &:focus {
+                    outline: none;
+                    border-color: $primaryColor;
+                    background-color: $pinkLightColor;
+                }
+                &:active {
+                    border-color: $primaryShadeColor;
+                }
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 23px;
+                    right: 31px;
+                    width: 7px;
+                    height: 7px;
+                    border-top: 1px solid $primaryColor;
+                    border-right: 1px solid $primaryColor;
+                    transform: rotate(135deg);
+                }
+                &.choice-active::before {
+                    top: 26px;
+                    transform: rotate(315deg);
+                }
+            }
+            &-list {
+                @include stylesForList;
+                position: absolute;
+                top: 52px;
+                right: 0;
+                height: 194px;
+                width: 292px;
+                padding: 22px 30px;
+                display: grid;
+                grid-template-columns: repeat(auto-fill, 100px);
+                justify-content: space-between;
+                border-radius: 0 0 10px 10px;
+                border: 2px solid $greyLightColor;
+                border-top: none;
+                background-color: $whiteColor;
+                z-index: 2;
+                &-item {
+                    cursor: pointer;
+                    transition: color .2s ease;
+                    &:hover {
+                        color: $primaryColor;
+                    }
+                }
+            }
+        }
+        &-account {
+            grid-column: 11/12;
+            grid-template-columns: repeat(2, 1fr);
+            display: grid;
+            &-enter {
+                @include stylesForButton;
+                background-image: url('../img/login.svg');
+                background-repeat: no-repeat;
+                background-position: center;
+                width: 34px;
+                height: 36px;
+                transform: translate(-16px);
+                transition: background .2s ease;
+                &:hover {
+                    background-image: url('../img/login-hover.svg');
+                }
+                &:focus {
+                    outline: none;
+                    background-image: url('../img/login-focus.svg');
+                    background-color: $primaryLightColor;
+                }
+                &:active {
+                    background-image: url('../img/login-active.svg');
+                    background-color: unset;
+                }
+            }
+            &-cart {
+                @include stylesForButton;
+                position: relative;
+                width: 49px;
+                height: 34px;
+                background-image: url('../img/cart.svg');
+                background-repeat: no-repeat;
+                background-position: 13px center;
+                transition: background .2s ease;
+                &:hover {
+                    background-image: url('../img/cart-hover.svg');
+                }
+                &:focus {
+                    outline: none;
+                    background-image: url('../img/cart-focus.svg');
+                    background-color: $primaryLightColor;
+                }
+                &:active {
+                    background-image: url('../img/cart-active.svg');
+                    background-color: unset;
+                }
+                &::before {
+                    content: '0';
+                    position: absolute;
+                    top: 6px;
+                    left: 0;
+                    width: 15px;
+                    height: 15px;
+                    padding-top: 3px;
+                    border-radius: 50%;
+                    background-color: $secondaryColor;
+                    color: $whiteColor;
+                    font-size: 10px;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,72 @@
+.footer {
+    background-color: $mdGreyColor;
+    &__content {
+        padding-top: 24px;
+        padding-bottom: 24px;
+        display: grid;
+        grid-template-columns: 187px 844px;
+        justify-content: space-between;
+        &-logo {
+            margin-bottom: 26px;
+        }
+        &-social {
+            &-list {
+                @include stylesForList;
+                display: grid;
+                grid-template-columns: repeat(3, 30px);
+                gap: 20px;
+                &-item {
+                    &-link {
+                        @include stylesForLink;
+                        display: inline-block;
+                        width: 30px;
+                        height: 30px;
+                        background-repeat: no-repeat;
+                        transition: opacity .2s ease;
+                        &.instagram {
+                            background-image: url('../img/instagram.svg');
+                        }
+                        &.vk {
+                            background-image: url('../img/vk.svg');
+                        }
+                        &.facebook {
+                            background-image: url('../img/fb.svg');
+                        }
+                        &:hover {
+                            opacity: 0.5;
+                        }
+                    }
+                }
+            }
+        }
+        &-right-column {
+            display: grid;
+            grid-template-columns: 84px 154px 141px 128px;
+            grid-column-gap: 112px;
+            &-list {
+                @include stylesForList;
+                &-item {
+                    color: $blackColor;
+                    &-link {
+                        @include stylesForMainLink;
+                        font-size: 14px;
+                    }
+                    &:not(:last-child) {
+                        margin-bottom: 5px;
+                    }
+                }
+            }
+        }
+    }
+    &__copyright {
+        padding-top: 4px;
+        padding-bottom: 4px;
+        background-color: $greyLightColor;
+        &-text {
+            @include clearStyles;
+            text-align: center;
+            color: $greyColor;
+            font-size: 14px;
+        }
+    }
+}

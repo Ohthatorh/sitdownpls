@@ -1,0 +1,50 @@
+@import 'cfg/variables';
+@import 'cfg/mixin';
+@import 'cfg/fonts';
+
+* {
+    box-sizing: border-box;
+}
+
+body,
+html {
+    @include clearStyles;
+    min-width: $minWidth;
+    font-size: $fontSizeNormal;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: $fontWeightNormal;
+    background-color: $whiteColor;
+    color: $blackColor;
+}
+
+.container {
+    max-width: $containerWidth;
+    margin: 0 auto;
+    padding: 0 50px;
+}
+
+.visually-hidden {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+}
+
+@media only screen and (max-width: 1366px) {
+    .container {
+        padding: 0 35px;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .container {
+        padding: 0 72px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .container {
+        padding: 0 12px;
+    }
+}

@@ -1,0 +1,184 @@
+@mixin clearStyles {
+    margin: 0;
+    padding: 0;
+}
+
+@mixin stylesForLink {
+    @include clearStyles();
+    text-decoration: none;
+}
+
+@mixin stylesForList {
+    @include clearStyles();
+    list-style-type: none;
+}
+
+@mixin stylesForInput {
+    @include clearStyles();
+    border: none;
+}
+
+@mixin stylesForButton {
+    @include clearStyles();
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+@mixin stylesForTitle {
+    @include clearStyles;
+    font-weight: 400;
+    font-size: 32px;
+    color: $blackColor;
+    @media only screen and (max-width: 768px) {
+        font-size: 24px;
+    }
+}
+
+@mixin buyButtonStyles {
+    @include stylesForButton;
+    padding: 17px 35px;
+    border: 1px solid $primaryColor;
+    border-radius: 10px;
+    font-size: 16px;
+    text-align: center;
+    color: $primaryColor;
+    transition: color .2s ease, background .2s ease;
+    &:hover {
+        color: $whiteColor;
+        background-color: $primaryColor;
+    }
+    &:focus {
+        outline: none;
+        color: $whiteColor;
+        background-color: $primaryLightColor;
+    }
+    &:active {
+        color: $whiteColor;
+        background-color: $primaryShadeColor;
+    }
+    @media only screen and (max-width: 1366px) {
+        padding: 17px 36px;
+    }
+}
+
+@mixin stylesForMainButton {
+    @include stylesForButton;
+    border-radius: 10px;
+    background-color: $primaryColor;
+    font-weight: 700;
+    color: $whiteColor;
+    transition: background .2s ease, border .2s ease;
+    border: 2px solid $primaryColor;
+    &:hover {
+        background-color: $primaryLightColor;
+    }
+    &:focus {
+        outline: none;
+        border-color: $primaryShadeColor;
+    }
+    &:active {
+        background-color: $primaryShadeColor;
+    }
+    @media only screen and (max-width: 1366px) {
+        padding: 19px 49px;
+    }
+}
+
+@mixin stylesForBtnArrow {
+    @include stylesForButton;
+    width: 32px;
+    height: 32px;
+    border: 2px solid $primaryColor;
+    border-radius: 50%;
+    transition: background .2s ease;
+    &:hover {
+        background-color: $primaryColor;
+        &::before {
+            border-color: $whiteColor;
+        }
+    }
+    &:focus {
+        outline: none;
+        background-color: $primaryLightColor;
+        &::before {
+            border-color: $whiteColor;
+        }
+    }
+    &:active {
+        background-color: $primaryShadeColor;
+        border-color: $primaryShadeColor;
+    }
+    &::before {
+        content: '';
+        position: absolute;
+        top: 10px;
+        right: 11px;
+        width: 7px;
+        height: 7px;
+        border-top: 2px solid $primaryColor;
+        border-right: 2px solid $primaryColor;
+        transform: rotate(45deg);
+        transition: border .2s ease;
+    }
+    &.swiper-button-disabled {
+        border-color: $greyColor;
+        cursor: unset;
+        &::before {
+            border-color: $greyColor;
+        }
+        &:hover {
+            background-color: unset;
+            &::before {
+                border-color: $greyColor;
+            }
+        }
+        &:focus {
+            background-color: unset;
+            &::before {
+                border-color: $greyColor;
+            }
+        }
+        &:active {
+            background-color: unset;
+            border-color: $greyColor;
+        }
+    }
+}
+
+@mixin stylesForMainInput {
+    @include stylesForInput();
+    border: 2px solid $greyLightColor;
+    color: $blackColor;
+    background-color: $greyLightColor;
+    transition: background .2s ease;
+    &:hover {
+        background-color: $mdGreyColor;
+    }
+    &:focus {
+        outline: none;
+        background-color: $pinkLightColor;
+        border-color: $primaryColor;
+    }
+    &::placeholder {
+        color: $greyColor;
+    }
+}
+
+@mixin stylesForMainLink {
+    @include stylesForLink;
+    color: $greyColor;
+    transition: color .2s ease, background .2s ease;
+    &:hover {
+        color: $primaryColor;
+    }
+    &:active {
+        color: $primaryShadeColor;
+        background-color: unset;
+    }
+    &:focus {
+        outline: none;
+        background-color: $pinkVioletColor;
+        color: $primaryShadeColor;
+    }
+}

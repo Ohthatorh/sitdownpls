@@ -1,7 +1,3 @@
-const categoryButton = document.querySelector('.header__bot-row-form-category-btn')
-categoryButton.addEventListener('click', e => {
-    e.preventDefault()
-})
 const highrateButton = document.querySelector('.main__highrate-btn')
 highrateButton.addEventListener('click', e => {
     e.preventDefault()
@@ -24,13 +20,14 @@ contactUsButton.addEventListener('click', () => {
 const burgerButton = document.querySelector('.hamburger--spring')
 const listSide = document.querySelector('.header__bot-row-list')
 const tlListSide = gsap.timeline({paused: true})
-tlListSide.fromTo(listSide, {opacity: 0}, {opacity: 1, duration: 0.1})
-    .fromTo('.header__bot-row-list-item:first-child', {y: -30, x:52, opacity: 0},{y: 0,opacity: 1,duration: 0.1})
-    .fromTo('.header__bot-row-list-item:nth-child(2)', {y: -30, x:52, opacity: 0},{y: 0,opacity: 1,duration: 0.1})
-    .fromTo('.header__bot-row-list-item:nth-child(3)', {y: -30, x:52, opacity: 0},{y: 0,opacity: 1,duration: 0.1})
-    .fromTo('.header__bot-row-list-item:nth-child(4)', {y: -30, x:52, opacity: 0},{y: 0,opacity: 1,duration: 0.1})
-    .fromTo('.header__bot-row-list-item:nth-child(5)', {y: -30, x:52, opacity: 0},{y: 0,opacity: 1,duration: 0.1})
-    .fromTo('.header__bot-row-list-item:last-child', {y: -30, x:52, opacity: 0},{y: 0,opacity: 1,duration: 0.1})
+if (innerWidth < 1024) {
+    tlListSide.fromTo('.header__bot-row-list-item:first-child', {y: -30, x:52, opacity: 0},{y: 0,opacity: 1,duration: 0.1})
+        .fromTo('.header__bot-row-list-item:nth-child(2)', {y: -30, x:52, opacity: 0},{y: 0,opacity: 1,duration: 0.1})
+        .fromTo('.header__bot-row-list-item:nth-child(3)', {y: -30, x:52, opacity: 0},{y: 0,opacity: 1,duration: 0.1})
+        .fromTo('.header__bot-row-list-item:nth-child(4)', {y: -30, x:52, opacity: 0},{y: 0,opacity: 1,duration: 0.1})
+        .fromTo('.header__bot-row-list-item:nth-child(5)', {y: -30, x:52, opacity: 0},{y: 0,opacity: 1,duration: 0.1})
+        .fromTo('.header__bot-row-list-item:last-child', {y: -30, x:52, opacity: 0},{y: 0,opacity: 1,duration: 0.1})
+}
 burgerButton.addEventListener('click', () => {
     if (!burgerButton.classList.contains('is-active')) {
        burgerButton.classList.add('is-active') 

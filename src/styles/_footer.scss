@@ -24,13 +24,13 @@
                         background-repeat: no-repeat;
                         transition: opacity .2s ease;
                         &.instagram {
-                            background-image: url('/img/instagram.svg');
+                            background-image: url('../img/instagram.svg');
                         }
                         &.vk {
-                            background-image: url('/img/vk.svg');
+                            background-image: url('../img/vk.svg');
                         }
                         &.facebook {
-                            background-image: url('/img/fb.svg');
+                            background-image: url('../img/fb.svg');
                         }
                         &:hover {
                             opacity: 0.5;

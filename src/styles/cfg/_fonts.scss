@@ -3,8 +3,8 @@
     font-style: normal;
     font-weight: 400;
     font-display: swap;
-    src: url('/fonts/open-sans-v20-latin_cyrillic-regular.woff2') format('woff2'),
-         url('/fonts/open-sans-v20-latin_cyrillic-regular.woff') format('woff');
+    src: url('../fonts/open-sans-v20-latin_cyrillic-regular.woff2') format('woff2'),
+         url('../fonts/open-sans-v20-latin_cyrillic-regular.woff') format('woff');
 }
 
 @font-face {
@@ -12,8 +12,8 @@
     font-style: normal;
     font-weight: 700;
     font-display: swap;
-    src: url('/fonts/open-sans-v20-latin_cyrillic-700.woff2') format('woff2'),
-         url('/fonts/open-sans-v20-latin_cyrillic-700.woff') format('woff');
+    src: url('../fonts/open-sans-v20-latin_cyrillic-700.woff2') format('woff2'),
+         url('../fonts/open-sans-v20-latin_cyrillic-700.woff') format('woff');
 }
 
 @font-face {
@@ -21,6 +21,6 @@
     font-style: normal;
     font-weight: 900;
     font-display: swap;
-    src: url('/fonts/playfair-display-v22-latin_cyrillic-900.woff2') format('woff2'),
-         url('/fonts/playfair-display-v22-latin_cyrillic-900.woff') format('woff');
+    src: url('../fonts/playfair-display-v22-latin_cyrillic-900.woff2') format('woff2'),
+         url('../fonts/playfair-display-v22-latin_cyrillic-900.woff') format('woff');
 }

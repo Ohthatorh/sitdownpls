@@ -74,6 +74,10 @@
                 &:nth-child(5) {
                     background-image: url('../img/sofa-type-2.png')
                 }
+                &-card {
+                    width: 100%;
+                    height: 100%;
+                }
                 &-discount {
                     @include clearStyles;
                     width: 82px;
@@ -104,8 +108,13 @@
                     &-name {
                         @include clearStyles;
                         margin-bottom: 23px;
-                        font-size: 24px;
-                        line-height: 31px;
+                        &-link {
+                            @include stylesForLink;
+                            font-size: 24px;
+                            line-height: 31px;
+                            font-weight: normal;
+                            color: $blackColor;
+                        }
                     }
                     &-price {
                         @include clearStyles;
@@ -166,8 +175,13 @@
                     &-name {
                         @include clearStyles;
                         margin-bottom: 23px;
-                        font-size: 24px;
-                        line-height: 31px;
+                        &-link {
+                            @include stylesForLink;
+                            color: $blackColor;
+                            font-size: 24px;
+                            line-height: 31px;
+                            font-weight: normal;
+                        }
                     }
                     &-price {
                         @include clearStyles;
@@ -327,7 +341,12 @@
                 &-title {
                     @include clearStyles;
                     margin-bottom: 30px;
-                    font-size: 24px;
+                    &-link {
+                        @include stylesForLink;
+                        font-size: 24px;
+                        font-weight: normal;
+                        color: $blackColor;
+                    }
                 }
                 &-types {
                     @include stylesForList;
@@ -786,8 +805,10 @@
                         position: unset;
                         &-name {
                             margin-bottom: 18px;
-                            font-size: 16px;
-                            line-height: 21px;
+                            &-link {
+                                font-size: 16px;
+                                line-height: 21px;
+                            }
                         }
                         &-price {
                             margin-bottom: 17px;
@@ -862,8 +883,10 @@
                                 width: 152px;
                             }
                             &-title {
-                                font-size: 16px;
                                 margin-bottom: 20px;
+                                &-link {
+                                    font-size: 16px;
+                                }
                             }
                             &-types {
                                 display: block;

@@ -1,8 +1,8 @@
 const mainBannerSwiper = new Swiper(('.main__front-banner-swiper'), {
-    autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
-    }
+    // autoplay: {
+    //     delay: 3000,
+    //     disableOnInteraction: false,
+    // }
 })
 
 const mainSpecialSwiper = new Swiper(('.main__special-swiper'), {

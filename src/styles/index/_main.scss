@@ -28,7 +28,7 @@
         }
         &-btn {
             @include stylesForMainButton;
-            padding: 22px 50px;
+            padding: 18px 48px;
         }
     }
     &__special {
@@ -55,15 +55,15 @@
         &-list {
             @include stylesForList;
             &-item {
-                padding-top: 70px;
+                padding-top: 65px;
                 position: relative;
                 max-width: 296px;
-                height: 511px;
+                min-height: 511px;
                 background-color: $greyLightColor;
                 border-radius: 10px;
                 text-align: center;
                 &:nth-child(3n+2) {
-                    padding-top: 40px;
+                    padding-top: 34px;
                     max-width: 624px;
                     background-repeat: no-repeat;
                     background-position: 93% 93%;
@@ -84,7 +84,7 @@
                     position: absolute;
                     padding: 9px 0;
                     text-align: center;
-                    top: 29px;
+                    top: 27px;
                     left: 0;
                     background-color: $secondaryColor;
                     color: white;
@@ -93,7 +93,7 @@
                     &::before {
                         content: ''; 
                         position: absolute;
-                        right: -30px;
+                        right: -29px;
                         top: 0px;
                         border: 17px solid transparent;
                         border-left: 14px solid $secondaryColor;
@@ -102,12 +102,12 @@
                 &-description {
                     width: 222px;
                     position: absolute;
-                    bottom: 30px;
+                    bottom: 33px;
                     left: 30px;
                     text-align: left;
                     &-name {
                         @include clearStyles;
-                        margin-bottom: 23px;
+                        margin-bottom: 21px;
                         &-link {
                             @include stylesForLink;
                             font-size: 24px;
@@ -122,7 +122,7 @@
                         font-size: 18px;
                         color: $secondaryColor;
                         .price-old {
-                            margin-left: 30px;
+                            margin-left: 28px;
                             font-size: 16px;
                             text-decoration: line-through;
                             color: $greyColor;
@@ -151,7 +151,7 @@
                 padding-top: 75px;
                 position: relative;
                 width: 296px;
-                height: 420px;
+                min-height: 420px;
                 background-color: $greyLightColor;
                 border-radius: 10px;
                 text-align: center;
@@ -387,7 +387,7 @@
             &-item {
                 position: relative;
                 max-width: 624px;
-                height: 676px;
+                min-height: 676px;
                 background-color: $greyLightColor;
                 border-radius: 10px;
                 &-description {
@@ -437,6 +437,7 @@
                     &::before,
                     &::after {
                         opacity: 1;
+                        z-index: 2;
                     }
                 }
                 &::before {
@@ -452,7 +453,7 @@
                     font-size: 9px;
                     line-height: 14px;
                     text-align: center;
-                    z-index: 2;
+                    z-index: -1;
                     opacity: 0;
                     transition: opacity .2s ease;
                 }
@@ -465,7 +466,7 @@
                     width: 12px;
                     height: 12px;
                     background-color: $blackColor;
-                    z-index: 1;
+                    z-index: -1;
                     opacity: 0;
                     transition: opacity .2s ease;
                 }
@@ -665,7 +666,7 @@
             &-list {
                 &-item {
                     width: 296px;
-                    height: 458px;
+                    min-height: 458px;
                     &-img {
                         width: 296px;
                     }
@@ -789,7 +790,7 @@
                     width: auto;
                     min-width: 140px;
                     padding-top: 53px;
-                    height: 279px;
+                    min-height: 279px;
                     &-rate {
                         font-size: 12px;
                         top: 8px;

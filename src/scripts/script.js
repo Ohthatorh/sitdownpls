@@ -19,27 +19,37 @@ contactUsButton.addEventListener('click', () => {
 })
 const burgerButton = document.querySelector('.hamburger--spring')
 const listSide = document.querySelector('.header__bot-row-list')
+const listHeader = document.querySelector('.header__top-row-list')
 const tlListSide = gsap.timeline({paused: true})
 if (innerWidth < 1024) {
-    tlListSide.fromTo('.header__bot-row-list-item:first-child', {y: -30, x:52, opacity: 0},{y: 0,opacity: 1,duration: 0.1})
-        .fromTo('.header__bot-row-list-item:nth-child(2)', {y: -30, x:52, opacity: 0},{y: 0,opacity: 1,duration: 0.1})
-        .fromTo('.header__bot-row-list-item:nth-child(3)', {y: -30, x:52, opacity: 0},{y: 0,opacity: 1,duration: 0.1})
-        .fromTo('.header__bot-row-list-item:nth-child(4)', {y: -30, x:52, opacity: 0},{y: 0,opacity: 1,duration: 0.1})
-        .fromTo('.header__bot-row-list-item:nth-child(5)', {y: -30, x:52, opacity: 0},{y: 0,opacity: 1,duration: 0.1})
-        .fromTo('.header__bot-row-list-item:last-child', {y: -30, x:52, opacity: 0},{y: 0,opacity: 1,duration: 0.1})
+    tlListSide.fromTo('.header__bot-row-list-item:first-child', {y: -30, opacity: 0},{y: 0,opacity: 1,duration: 0.1})
+        .fromTo('.header__bot-row-list-item:nth-child(2)', {y: -30, opacity: 0},{y: 0,opacity: 1,duration: 0.1})
+        .fromTo('.header__bot-row-list-item:nth-child(3)', {y: -30, opacity: 0},{y: 0,opacity: 1,duration: 0.1})
+        .fromTo('.header__bot-row-list-item:nth-child(4)', {y: -30, opacity: 0},{y: 0,opacity: 1,duration: 0.1})
+        .fromTo('.header__bot-row-list-item:nth-child(5)', {y: -30, opacity: 0},{y: 0,opacity: 1,duration: 0.1})
+        .fromTo('.header__bot-row-list-item:last-child', {y: -30, opacity: 0},{y: 0,opacity: 1,duration: 0.1})
+}
+if (innerWidth < 768) {
+    tlListSide.fromTo('.header__top-row-list-item:first-child', {y: -30, opacity: 0},{y: 0,opacity: 1,duration: 0.1})
+        .fromTo('.header__top-row-list-item:nth-child(2)', {y: -30, opacity: 0},{y: 0,opacity: 1,duration: 0.1})
+        .fromTo('.header__top-row-list-item:nth-child(3)', {y: -30, opacity: 0},{y: 0,opacity: 1,duration: 0.1})
+        .fromTo('.header__top-row-list-item:last-child', {y: -30, opacity: 0},{y: 0,opacity: 1,duration: 0.1})
 }
 burgerButton.addEventListener('click', () => {
     if (!burgerButton.classList.contains('is-active')) {
        burgerButton.classList.add('is-active') 
        listSide.classList.add('list-active')
-       tlListSide.play();
+       listHeader.classList.add('list-active')
+       tlListSide.play()
     } else {
         burgerButton.classList.remove('is-active')
-        tlListSide.reverse();
+        listSide.classList.remove('list-active')
+        listHeader.classList.remove('list-active')
+        tlListSide.reverse()
     }
 })
 listSide.addEventListener('click', (e) => {
-    tlListSide.reverse();
+    tlListSide.reverse()
     burgerButton.classList.remove('is-active')
     listSide.classList.remove('list-active')
 })

@@ -20,7 +20,7 @@
         &-text {
             @include clearStyles;
             width: 560px;
-            margin-bottom: 48px;
+            margin-bottom: 45px;
             font-weight: 700;
             font-size: 48px;
             line-height: 65px;
@@ -32,12 +32,12 @@
         }
     }
     &__special {
-        padding-top: 64px;
-        margin-bottom: 68px;
+        padding-top: 72px;
+        margin-bottom: 66px;
         position: relative;
         &-swiper-nav {
             position: absolute;
-            top: 66px;
+            top: 72px;
             right: 50px;
             &-arrow {
                 @include stylesForBtnArrow;
@@ -335,7 +335,7 @@
                     }
                 }
                 &-img {
-                    margin-bottom: 28px;
+                    margin-bottom: 24px;
                     transform: translateX(-30px)
                 }
                 &-title {
@@ -364,7 +364,7 @@
     }
     &__useful {
         position: relative;
-        margin-bottom: 68px;
+        margin-bottom: 71px;
         &-title {
             @include stylesForTitle;
             margin-bottom: 25px;
@@ -391,7 +391,7 @@
                 background-color: $greyLightColor;
                 border-radius: 10px;
                 &-description {
-                    padding: 27px 30px;
+                    padding: 27px 30px 100px;
                     &-text {
                         @include clearStyles;
                         line-height: 33px;
@@ -400,7 +400,7 @@
                     &-btn {
                         @include buyButtonStyles;
                         position: absolute;
-                        bottom: 31px;
+                        bottom: 29px;
                         left: 31px;
                     }
                 }
@@ -483,7 +483,7 @@
             &-button {
                 @include stylesForMainButton;
                 padding: 17px 32px;
-                margin-bottom: 13px;
+                margin-bottom: 11px;
             }
             &-checkbox {
                 display: block;
@@ -558,6 +558,9 @@
             .js-validate-success-field {
                 border: 2px solid $greenInputColor;
             }
+        }
+        &-img {
+            transform: translateY(-17px);
         }
     }
 }

@@ -1,7 +1,7 @@
 .footer {
     background-color: $mdGreyColor;
     &__content {
-        padding-top: 24px;
+        padding-top: 27px;
         padding-bottom: 24px;
         display: grid;
         grid-template-columns: 187px 844px;
@@ -75,9 +75,16 @@
     .footer {
         &__content {
             grid-template-columns: repeat(2, 1fr);
+            padding-bottom: 22px;
             &-right-column {
-                grid-column-gap: 75px;
+                grid-column-gap: 76px;
             }
+            &-logo {
+                transform: translateY(-2px);
+            }
+        }
+        &__copyright {
+            padding: 6px 0;
         }
     }
 }
@@ -85,18 +92,23 @@
 @media only screen and (max-width: 1024px) {
     .footer {
         &__content {
+            padding-top: 25px;
             display: block;
             &-left-column {
                 display: grid;
                 grid-template-columns: auto 130px;
             }
             &-logo {
-                margin-bottom: 30px;
+                margin-bottom: 28px;
+                transform: translateY(2px);
             }
             &-right-column {
                 justify-content: space-between;
                 grid-column-gap: 38px;
             }
+        }
+        &__copyright {
+            padding: 8px 0;
         }
     }
 }
@@ -104,6 +116,7 @@
 @media only screen and (max-width: 768px) {
     .footer {
         &__content {
+            padding-top: 22px;
             &-left-column {
                 margin-bottom: 22px;
                 grid-template-columns: unset;
@@ -113,7 +126,7 @@
                 justify-content: center;
             }
             &-logo {
-                margin-bottom: 24px;
+                margin-bottom: 27px;
             }
             &-right-column {
                 grid-template-columns: repeat(2, 1fr);

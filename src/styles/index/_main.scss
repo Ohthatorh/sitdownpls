@@ -191,6 +191,12 @@
                     opacity: 0;
                     transition: opacity .2s ease
                 }
+                &-card {
+                    height: 118px;
+                    display: flex;
+                    align-items: flex-end;
+                    justify-content: space-evenly;
+                }
             }
         }
         &-btn {
@@ -844,6 +850,10 @@
                     min-width: 140px;
                     padding-top: 55px;
                     min-height: 279px;
+                    &-card {
+                        height: unset;
+                        display: block;
+                    }
                     &-rate {
                         font-size: 12px;
                         top: 8px;

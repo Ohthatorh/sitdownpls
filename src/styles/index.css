@@ -1386,6 +1386,19 @@ html {
   transition: opacity .2s ease;
 }
 
+.main__highrate-list-item-card {
+  height: 118px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
 .main__highrate-btn {
   margin: 0;
   padding: 0;
@@ -2507,6 +2520,10 @@ html {
     min-width: 140px;
     padding-top: 55px;
     min-height: 279px;
+  }
+  .main__highrate-list-item-card {
+    height: unset;
+    display: block;
   }
   .main__highrate-list-item-rate {
     font-size: 12px;

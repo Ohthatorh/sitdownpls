@@ -22,15 +22,17 @@
                         width: 30px;
                         height: 30px;
                         background-repeat: no-repeat;
+                        background-size: 500%;
+                        background-position: center;
                         transition: opacity .2s ease;
                         &.instagram {
-                            background-image: url('../img/instagram.svg');
+                            background-image: url('../img/sprite.svg#instagram');
                         }
                         &.vk {
-                            background-image: url('../img/vk.svg');
+                            background-image: url('../img/sprite.svg#vk');
                         }
                         &.facebook {
-                            background-image: url('../img/fb.svg');
+                            background-image: url('../img/sprite.svg#fb');
                         }
                         &:hover {
                             opacity: 0.5;

@@ -424,7 +424,6 @@
             &-logo {
                 &-link {
                     margin-right: 0;
-                    transform: translateY(2px);
                 }
             }
             &-content {
@@ -500,11 +499,20 @@
                 transform: translate(-13px, 2px);
             }
             &-form {
+                .choices__inner {
+                    padding: 15px 27px !important;
+                }
                 width: 100%;
                 margin-right: 0;
                 grid-template-columns: 1fr 191px;
                 &-input {
                     width: 100%;
+                    &-container {
+                        #search-svg-container {
+                            width: 15px;
+                            height: 15px;
+                        }
+                    }
                 }
                 &-list {
                     height: fit-content;
@@ -561,7 +569,7 @@
         }
         &__bot-row {
             padding-top: 22px;
-            padding-bottom: 30px;
+            padding-bottom: 33px;
             &-logo {
                 &-link {
                     width: 100%;
@@ -594,7 +602,7 @@
                 }
             }
             &-content {
-                grid-row-gap: 31px;
+                grid-row-gap: 30px;
             }
             &-list {
                 &.list-active {

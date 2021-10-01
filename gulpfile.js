@@ -61,7 +61,6 @@ const images = () => {
     return src([
         'src/img/**/*.jpg',
         'src/img/**/*.png',
-        'src/img/*.svg',
         'src/img/**/*.jpeg'
     ])
     .pipe(image())

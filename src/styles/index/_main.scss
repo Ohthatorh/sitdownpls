@@ -33,7 +33,7 @@
         }
     }
     &__special {
-        padding-top: 70px;
+        padding-top: 68px;
         margin-bottom: 66px;
         position: relative;
         &-swiper-nav {
@@ -211,8 +211,8 @@
     }
     &__middle-banner {
         margin-bottom: 70px;
-        padding-top: 157px;
-        padding-bottom: 150px;
+        padding-top: 155px;
+        padding-bottom: 148px;
         background-image: url('../img/middle-banner.jpg');
         background-repeat: no-repeat;
         background-size: cover;
@@ -354,7 +354,7 @@
                 &-types {
                     @include stylesForList;
                     display: flex;
-                    margin-bottom: 16px;
+                    margin-bottom: 17px;
                     &-type {
                         margin-right: 30px;
                         font-size: 14px;
@@ -398,6 +398,7 @@
                         @include clearStyles;
                         line-height: 33px;
                         font-size: 24px;
+                        font-weight: normal;
                     }
                     &-btn {
                         @include buyButtonStyles;
@@ -410,7 +411,7 @@
         }
     }
     &__contactus {
-        margin-bottom: 70px;
+        margin-bottom: 44px;
         &-title {
             @include stylesForTitle;
             margin-bottom: 6px;
@@ -477,16 +478,18 @@
             }
         }
         &-form {
+            .just-validate-tooltip-container {
+                margin-bottom: 28px;
+            }
             &-input {
                 @include stylesForMainInput;
                 width: 100%;
                 padding: 17px;
-                margin-bottom: 28px;
                 border-radius: 10px;
             }
             &-button {
                 @include stylesForMainButton;
-                padding: 17px 32px;
+                padding: 16px 32px;
                 margin-bottom: 11px;
             }
             &-checkbox {
@@ -576,6 +579,8 @@
                 margin-bottom: 49px;
             }
             &-slide {
+                padding-top: 79px;
+                padding-bottom: 80px;
                 &:first-child {
                     background-image: url('../img/main-banner-1024.jpg');
                 }
@@ -617,20 +622,23 @@
         }
         &__highrate {
             &-title {
-                margin-bottom: 25px;
+                margin-bottom: 23px;
             }
             &-list {
                 grid-template-columns: repeat(3, 1fr);
+                margin-bottom: 32px;
                 &-item {
+                    padding-top: 73px;
                     &:nth-child(n + 7) {
                         display: none;
                     }
                     &-description {
+                        bottom: 30px;
                         &-price {
                             font-size: 16px;
                         }
                         &-name {
-                            margin-bottom: 25px;
+                            margin-bottom: 24px;
                         }
                     }
                 }
@@ -649,9 +657,14 @@
             }
         }
         &__middle-banner {
+            padding-bottom: 150px;
             background-image: url('../img/middle-banner-1024.jpg');
+            &-text {
+                margin-bottom: 1px;
+            }
         }
         &__categories {
+            margin-bottom: 68px;
             &-title {
                 margin-bottom: 23px;
             }
@@ -667,6 +680,9 @@
                         position: absolute;
                         bottom: 31px;
                         left: 30px;
+                    }
+                    &-types {
+                        margin-bottom: 15px;
                     }
                     &:not(:first-child) {
                         .main__categories-list-item-title {
@@ -700,6 +716,7 @@
             }
         }
         &__useful {
+            margin-bottom: 67px;
             &-title {
                 margin-bottom: 22px;
             }
@@ -727,8 +744,9 @@
             }
         }
         &__contactus {
+            margin-bottom: 42px;
             &-title {
-                margin-bottom: 8px;
+                margin-bottom: 7px;
             }
             &-content {
                 grid-template-columns: 1fr 517px;
@@ -752,6 +770,7 @@
     .main {
         &__front-banner {
             &-slide {
+                padding-top: 81px;
                 &:first-child {
                     background-image: url('../img/main-banner-768.jpg');
                 }
@@ -762,37 +781,6 @@
                     background-image: url('../img/main-banner-third-768.jpg');
                 }
             }
-        }
-        &__special {
-            &-swiper {
-                &-nav {
-                    right: 72px;
-                }
-            }
-        }
-        &__highrate {
-            &-list {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-        &__middle {
-            &-banner {
-                &-content {
-                    padding: 0 36px;
-                }
-            }
-        }
-        &__useful {
-            &-swiper-nav {
-                top: 3px;
-                right: 72px;
-            }
-            &-title {
-                margin-bottom: 23px;
-            }
-        }
-        &__middle-banner {
-            background-image: url('../img/middle-banner-768.jpg');
         }
         &__categories {
             &-list {
@@ -805,8 +793,64 @@
                     "d e";
             }
         }
+        &__special {
+            margin-bottom: 68px;
+            &-swiper {
+                &-nav {
+                    right: 72px;
+                }
+            }
+            &-title {
+                margin-bottom: 23px;
+            }
+            &-list-item {
+                &-discount {
+                    top: 30px;
+                }
+                &-description {
+                    bottom: 29px;
+                    &-price {
+                        .price-old {
+                            margin-left: 26px;
+                        }
+                    }
+                }
+            }
+        }
+        &__highrate {
+            &-list {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        &__middle-banner {
+            background-image: url('../img/middle-banner-768.jpg');
+            &-content {
+                padding: 0 36px;
+            }
+        }
+        &__useful {
+            margin-bottom: 66px;
+            &-swiper-nav {
+                top: 3px;
+                right: 72px;
+            }
+            &-title {
+                margin-bottom: 23px;
+            }
+            &-list {
+                &-item {
+                    &-description {
+                        padding: 27px 37px 100px 30px;
+                        &-btn {
+                            bottom: 32px;
+                            left: 30px;
+                        }
+                    }
+                }
+            }
+        }
         &__contactus {
-            margin-bottom: 52px;
+            margin-bottom: 41px;
             &-content {
                 grid-template-columns: 1fr 187px;
             }
@@ -816,7 +860,7 @@
                 transform: translateY(-28px);
             }
             &-title {
-                margin-bottom: 6px;
+                margin-bottom: 7px;
             }
             &-form {
                 &-button {
@@ -830,16 +874,16 @@
 @media only screen and (max-width: 768px) {
     .main {
         &__front-banner {
-            margin-bottom: 25px;
+            margin-bottom: 26px;
             position: relative;
             &-content {
                 padding: 0;
             }
             &-slide {
                 position: unset;
-                padding: 32px 18px 20px;
+                padding: 30px 18px 20px;
                 background-position: top center;
-                background-size: unset; 
+                background-size: 100% 65%;
                 &:first-child {
                     background-image: url('../img/main-banner-320.jpg');
                 }
@@ -853,7 +897,7 @@
             &-text {
                 width: 250px;
                 padding-left: 12px;
-                margin-bottom: 159px;
+                margin-bottom: 158px;
                 font-size: 20px;
                 line-height: 27px;
             }
@@ -869,6 +913,12 @@
             &-list {
                 &-item {
                     padding-top: 73px;
+                    &-description {
+                        bottom: 30px;
+                        &-name {
+                            margin-bottom: 22px;
+                        }
+                    }
                 }
             }
             &-title {
@@ -884,10 +934,12 @@
             }
         }
         &__highrate {
+            margin-bottom: 69px;
             &-title {
                 margin-bottom: 23px;
             }
             &-list {
+                margin-bottom: 33px;
                 gap: 15px;
                 &-item {
                     width: auto;
@@ -916,7 +968,7 @@
                             margin-bottom: 18px;
                             &-link {
                                 font-size: 16px;
-                                line-height: 20px;
+                                line-height: 18px;
                             }
                         }
                         &-price {
@@ -932,10 +984,10 @@
         &__middle-banner {
             background-image: url('../img/middle-banner-320.jpg');
             position: relative;
-            padding-top: 34px;
+            padding-top: 33px;
             padding-bottom: 0;
             background-position: top center;
-            background-size: 100% 70%;
+            background-size: 100% 69.5%;
             &-description {
                 width: 100%;
             }
@@ -958,15 +1010,16 @@
             }
         }
         &__categories {
-            margin-bottom: 76px;
+            margin-bottom: 75px;
             &-title {
-                margin-bottom: 27px;
+                margin-bottom: 26px;
             }
             &-list {
                 grid-column-gap: 17px;
                 grid-template-rows: 332px 206px 206px;
                 &-item {
                     &-types {
+                        margin-bottom: 16px;
                         &-type {
                             margin-right: 21px;
                         }
@@ -978,7 +1031,7 @@
                         color: rgba(0,0,0,0);
                     }
                     &:first-child {
-                        padding: 28px;
+                        padding: 30px;
                         .main__categories-list-item {
                             &-img {
                                 width: 350px;
@@ -991,21 +1044,21 @@
                         }
                     }
                     &:not(:first-child) {
-                        padding: 16px;
+                        padding: 15px;
                         .main__categories-list-item {
                             &-img {
                                 transform: translateX(-15px);
                                 width: 152px;
                             }
                             &-title {
-                                margin-bottom: 20px;
+                                margin-bottom: 17px;
                                 &-link {
                                     font-size: 16px;
                                 }
                             }
                             &-types {
                                 display: block;
-                                margin-bottom: 7px;
+                                margin-bottom: 6px;
                                 &-type {
                                     margin-bottom: 2px;
                                     font-size: 10px;
@@ -1031,7 +1084,10 @@
             }
         }
         &__useful {
-            margin-bottom: 114px;
+            margin-bottom: 112px;
+            &-title {
+                margin-bottom: 25px;
+            }
             &-swiper {
                 &-nav {
                     bottom: -46px;
@@ -1041,16 +1097,35 @@
             }
         }
         &__contactus {
-            margin-bottom: 68px;
+            margin-bottom: 70px;
             &-img {
                 display: none;
             }
             &-content {
                 display: block;
+                &-text {
+                    margin-bottom: 14px;
+                }
             }
             &-form {
                 &-checkbox {
                     font-size: 12px;
+                    .checkbox__label {
+                        padding-left: 20px;
+                    }
+                    .checkbox__span {
+                        &::before {
+                            width: 12px;
+                            height: 12px;
+                        }
+                        &::after {
+                            left: 5px;
+                            top: 2px;
+                        }
+                    }
+                }
+                &-button {
+                    margin-bottom: 11px;
                 }
             }
             &-title {

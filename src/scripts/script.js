@@ -53,8 +53,3 @@ listSide.addEventListener('click', (e) => {
     burgerButton.classList.remove('is-active')
     listSide.classList.remove('list-active')
 })
-const usefulCards = document.querySelectorAll('.main__useful-list-item')
-const usefulList = document.querySelector('.main__useful-list')
-usefulCards.forEach(el => {
-    el.style.height = `${usefulList.clientHeight}px`
-})

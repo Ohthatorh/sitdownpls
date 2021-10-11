@@ -336,12 +336,13 @@
                 &-count {
                     width: 15px;
                     height: 15px;
-                    padding-top: 3px;
+                    padding-top: 2px;
                     border-radius: 50%;
                     background-color: $secondaryColor;
                     color: $whiteColor;
                     font-size: 10px;
                     font-weight: normal;
+                    text-align: center;
                 }
                 #cart-svg {
                     transition: fill .2s ease;

@@ -6,13 +6,13 @@
             background-repeat: no-repeat;
             background-size: cover;
             &:first-child {
-                background-image: url('../img/main-banner.jpg');
+                background-image: url('../img/main-big-img.jpg');
             }
             &:nth-child(2) {
-                background-image: url('../img/main-banner-second.jpg');
+                background-image: url('../img/main-big-img-second.jpg');
             }
             &:last-child {
-                background-image: url('../img/main-banner-third.jpg');
+                background-image: url('../img/main-big-img-third.jpg');
                 .main__front-banner-text {
                     color: $whiteColor;
                 }
@@ -209,7 +209,7 @@
         margin-bottom: 70px;
         padding-top: 157px;
         padding-bottom: 149px;
-        background-image: url('../img/middle-banner.jpg');
+        background-image: url('../img/middle-big-img.jpg');
         background-repeat: no-repeat;
         background-size: cover;
         &-description {
@@ -581,13 +581,13 @@
                 padding-top: 81px;
                 padding-bottom: 80px;
                 &:first-child {
-                    background-image: url('../img/main-banner-1024.jpg');
+                    background-image: url('../img/main-big-img-1024.jpg');
                 }
                 &:nth-child(2) {
-                    background-image: url('../img/main-banner-second-1024.jpg');
+                    background-image: url('../img/main-big-img-second-1024.jpg');
                 }
                 &:last-child {
-                    background-image: url('../img/main-banner-third-1024.jpg');
+                    background-image: url('../img/main-big-img-third-1024.jpg');
                 }
             }
         }
@@ -658,7 +658,7 @@
         }
         &__middle-banner {
             padding-bottom: 150px;
-            background-image: url('../img/middle-banner-1024.jpg');
+            background-image: url('../img/middle-big-img-1024.jpg');
             &-text {
                 margin-bottom: 1px;
             }
@@ -768,13 +768,13 @@
             &-slide {
                 padding-top: 83px;
                 &:first-child {
-                    background-image: url('../img/main-banner-768.jpg');
+                    background-image: url('../img/main-big-img-768.jpg');
                 }
                 &:nth-child(2) {
-                    background-image: url('../img/main-banner-second-768.jpg');
+                    background-image: url('../img/main-big-img-second-768.jpg');
                 }
                 &:last-child {
-                    background-image: url('../img/main-banner-third-768.jpg');
+                    background-image: url('../img/main-big-img-third-768.jpg');
                 }
             }
         }
@@ -822,7 +822,7 @@
             }
         }
         &__middle-banner {
-            background-image: url('../img/middle-banner-768.jpg');
+            background-image: url('../img/middle-big-img-768.jpg');
             &-content {
                 padding: 0 36px;
             }
@@ -881,13 +881,13 @@
                 background-position: top center;
                 background-size: 100% 65%;
                 &:first-child {
-                    background-image: url('../img/main-banner-320.jpg');
+                    background-image: url('../img/main-big-img-320.jpg');
                 }
                 &:nth-child(2) {
-                    background-image: url('../img/main-banner-second-320.jpg');
+                    background-image: url('../img/main-big-img-second-320.jpg');
                 }
                 &:last-child {
-                    background-image: url('../img/main-banner-third-320.jpg');
+                    background-image: url('../img/main-big-img-third-320.jpg');
                 }
             }
             &-text {
@@ -977,7 +977,7 @@
             }
         }
         &__middle-banner {
-            background-image: url('../img/middle-banner-320.jpg');
+            background-image: url('../img/middle-big-img-320.jpg');
             position: relative;
             padding-top: 33px;
             padding-bottom: 0;

@@ -1291,11 +1291,11 @@ html {
 .main__highrate-list-item {
   padding-top: 75px;
   position: relative;
-  width: 296px;
-  min-height: 420px;
   background-color: #F6F6F6;
   border-radius: 10px;
   text-align: center;
+  width: 296px;
+  min-height: 420px;
 }
 
 .main__highrate-list-item-rate {
@@ -1381,13 +1381,6 @@ html {
   }
 }
 
-.main__highrate-list-item:nth-child(n + 9) {
-  display: none;
-  opacity: 0;
-  -webkit-transition: opacity .2s ease;
-  transition: opacity .2s ease;
-}
-
 .main__highrate-list-item-card {
   height: 118px;
   display: -webkit-box;
@@ -1399,6 +1392,13 @@ html {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+}
+
+.main__highrate-list-item:nth-child(n + 9) {
+  display: none;
+  opacity: 0;
+  -webkit-transition: opacity .2s ease;
+  transition: opacity .2s ease;
 }
 
 .main__highrate-btn {
@@ -2208,10 +2208,6 @@ html {
   font-size: 14px;
 }
 
-.main__contactus-form-checkbox-link {
-  color: #A65CF0;
-}
-
 .main__contactus-form-checkbox.checkbox__label {
   position: relative;
   display: inline-block;
@@ -2276,6 +2272,10 @@ html {
 
 .main__contactus-form-checkbox .checkbox:focus + .checkbox__span {
   outline: 1px solid #A65CF0;
+}
+
+.main__contactus-form-checkbox-link {
+  color: #A65CF0;
 }
 
 .main__contactus-form .js-validate-error-label {

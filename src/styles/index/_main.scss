@@ -139,62 +139,13 @@
             grid-template-columns: repeat(4, 1fr);
             gap: 32px;
             &-item {
-                padding-top: 75px;
-                position: relative;
+               @include stylesForCards;
                 width: 296px;
                 min-height: 420px;
-                background-color: $greyLightColor;
-                border-radius: 10px;
-                text-align: center;
-                &-rate {
-                    position: absolute;
-                    text-align: center;
-                    top: 16px;
-                    left: 30px;
-                    padding-left: 22px;
-                    background-image: url('../img/sprite.svg#rate');
-                    background-size: 200%;
-                    background-position: -37px 2px;
-                    background-repeat: no-repeat;
-                    color: $secondaryColor;
-                }
-                &-description {
-                    width: 237px;
-                    position: absolute;
-                    bottom: 29px;
-                    left: 30px;
-                    text-align: left;
-                    &-name {
-                        @include clearStyles;
-                        margin-bottom: 23px;
-                        &-link {
-                            @include stylesForLink;
-                            color: $blackColor;
-                            font-size: 24px;
-                            line-height: 31px;
-                            font-weight: normal;
-                        }
-                    }
-                    &-price {
-                        @include clearStyles;
-                        margin-bottom: 25px;
-                        font-size: 16px;
-                        color: $greyShadeColor;
-                    }
-                    &-btn {
-                        @include buyButtonStyles;
-                    }
-                }
-                &:nth-child(n + 9) {
+               &:nth-child(n + 9) {
                     display: none;
                     opacity: 0;
                     transition: opacity .2s ease
-                }
-                &-card {
-                    height: 118px;
-                    display: flex;
-                    align-items: flex-end;
-                    justify-content: space-evenly;
                 }
             }
         }
@@ -272,66 +223,7 @@
                     @include stylesForBtnArrow;
                 }
                 &-link {
-                    @include stylesForLink;
-                    display: inline-block;
-                    font-weight: 700;
-                    color: $primaryColor;
-                    position: relative;
-                    &::before {
-                        content: '';
-                        width: 0%;
-                        position: absolute;
-                        bottom: 0;
-                        left: 0;
-                        height: 2px;
-                        transition: background .2s ease, width .2s ease, color .2s ease;
-                    }
-                    &:hover {
-                        .link-arrow {
-                            background-color: $primaryColor;
-                            &::before {
-                                border-color: $whiteColor;
-                            }
-                        }
-                        &::before {
-                            background-color: $primaryColor;
-                            width: 75%;
-                        }
-                    }
-                    &:active {
-                        .link-arrow {
-                            background-color: $primaryShadeColor;
-                            border-color: $primaryShadeColor;
-                        }
-                        &::before {
-                            background-color: $primaryShadeColor;
-                            color: $primaryShadeColor;
-                            width: 75%;
-                        }
-                    }
-                    &:focus {
-                        .link-arrow {
-                            outline: none;
-                            background-color: $primaryLightColor;
-                            &::before {
-                                border-color: $whiteColor;
-                            }
-                        }
-                    }
-                    .link-arrow {
-                        @include stylesForBtnArrow;
-                        position: relative;
-                        display: inline-block;
-                        transform: translateY(5px);
-                        width: 22px;
-                        height: 22px;
-                        &::before {
-                            top: 6px;
-                            right: 6px;
-                            width: 5px;
-                            height: 5px;
-                        }
-                    }
+                    @include stylesForArrow;
                 }
                 &-img {
                     margin-bottom: 22px;
@@ -492,64 +384,10 @@
                 margin-bottom: 11px;
             }
             &-checkbox {
-                display: block;
-                cursor: pointer;
+                @include stylesForCheckbox;
                 font-size: 14px;
                 &-link {
                     color: $primaryColor;
-                }
-                &.checkbox__label {
-                    position: relative;
-                    display: inline-block;
-                    padding-left: 22px;
-                }
-                .checkbox {
-                    position: absolute;
-                    opacity: 0;
-                }
-                .checkbox__span {
-                    display: flex;
-                    align-items: center;
-                    border-radius: 2px;
-                }
-                .checkbox__span::before {
-                    content: '';
-                    position: absolute;
-                    left: 0;
-                    top: 0;
-                    display: inline-block;
-                    width: 14px;
-                    height: 14px;
-                    border: 1px solid $greyColor;
-                    border-radius: 2px;
-                }
-                .checkbox__span::after {
-                    content: '';
-                    position: absolute;
-                    left: 6px;
-                    top: 3px;
-                    width: 3px;
-                    height: 6px;
-                    border: solid $whiteColor;
-                    border-width: 0 2px 2px 0;
-                    -webkit-transform: rotate(45deg);
-                    -ms-transform: rotate(45deg);
-                    transform: rotate(45deg);
-                    transition: border .2s ease-in-out, opacity .2s ease-in-out;
-                    opacity: 0;
-                }
-                .checkbox:checked + .checkbox__span::before {
-                    border-color: $primaryColor;
-                    background-color: $primaryColor;
-                }
-                .checkbox:checked + .checkbox__span::after {
-                    opacity: 1;
-                }
-                .checkbox__span:hover {
-                    outline: 1px solid $primaryColor;
-                }
-                .checkbox:focus + .checkbox__span {
-                    outline: 1px solid $primaryColor;
                 }
             }
             .js-validate-error-label {

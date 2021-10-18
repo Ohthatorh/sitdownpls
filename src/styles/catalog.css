@@ -1394,9 +1394,13 @@ html {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 20px;
 }
 
 .main__catalog-right-column-filter-list-item {
+  position: relative;
   min-width: 90px;
   padding: 8px;
   border-radius: 3px;
@@ -1411,31 +1415,60 @@ html {
   cursor: pointer;
   color: #666;
   cursor: default;
+  padding-right: 20px;
 }
 
-.main__catalog-right-column-filter-list-item-btn .btn-close {
-  margin-left: 6px;
+.main__catalog-right-column-filter-list-item .btn-close {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
   cursor: pointer;
-  color: #666;
+  width: 20px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
 }
 
-.main__catalog-right-column-filter-list-item:not(:last-child) {
-  margin-right: 20px;
+.main__catalog-right-column-filter-list-item .btn-close::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  width: 7px;
+  height: 1px;
+  background-color: #333;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 
-.main__catalog-right-column-filter-list-item:first-child {
+.main__catalog-right-column-filter-list-item .btn-close::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  width: 7px;
+  height: 1px;
+  background-color: #333;
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+}
+
+.main__catalog-right-column-filter-list-item[data-filter='category'] {
   background-color: #DAFFD1;
 }
 
-.main__catalog-right-column-filter-list-item:nth-child(2) {
+.main__catalog-right-column-filter-list-item[data-filter='price'] {
   background-color: #FFF5D1;
 }
 
-.main__catalog-right-column-filter-list-item:nth-child(3) {
+.main__catalog-right-column-filter-list-item[data-filter='sales'] {
   background-color: #EBD1FF;
 }
 
-.main__catalog-right-column-filter-list-item:last-child {
+.main__catalog-right-column-filter-list-item[data-filter='color'] {
   background-color: #EAEAEA;
 }
 

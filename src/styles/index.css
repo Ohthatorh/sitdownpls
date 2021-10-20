@@ -2266,10 +2266,6 @@ html {
   opacity: 1;
 }
 
-.main__contactus-form-checkbox .checkbox__span:hover {
-  outline: 1px solid #A65CF0;
-}
-
 .main__contactus-form-checkbox .checkbox:focus + .checkbox__span {
   outline: 1px solid #A65CF0;
 }

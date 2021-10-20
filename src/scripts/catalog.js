@@ -36,12 +36,13 @@ inputFilterRange2.addEventListener('change', function () {
 })
 const mainCatalogSwiper = new Swiper(('.main__catalog-swiper'), {
     spaceBetween: 32,
-    slidesPerView: 3,
-    slidesPerColumn: 3,
-    slidesPerColumnFill: 'row',
-    slidesPerGroup: 3,
     pagination: {
         el: '.main__catalog-swiper-pagination',
+        clickable: 'true',
+        type: 'bullets',
+        renderBullet: function (index, className) {
+            return `<span class="${className}">${index+1}</span>`;
+        },
     },
 })
 document.addEventListener('click', (e) => {

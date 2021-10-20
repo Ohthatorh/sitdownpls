@@ -233,9 +233,6 @@
     .checkbox:checked + .checkbox__span::after {
         opacity: 1;
     }
-    .checkbox__span:hover {
-        outline: 1px solid $primaryColor;
-    }
     .checkbox:focus + .checkbox__span {
         outline: 1px solid $primaryColor;
     }
@@ -247,6 +244,8 @@
     background-color: $greyLightColor;
     border-radius: 10px;
     text-align: center;
+    width: 296px;
+    min-height: 420px;
     &-rate {
         position: absolute;
         text-align: center;

@@ -3,7 +3,48 @@
 }
 .main {
     &__catalog {
-        padding-bottom: 133px;
+        &-content {
+            padding-bottom: 133px;
+            position: relative;
+            .main__catalog-swiper-pagination {
+                bottom: 70px;
+                right: 485px;
+                .swiper-pagination-bullet {
+                    width: unset;
+                    height: unset; 
+                    padding: 5px 10px;
+                    border-radius: 10px;
+                    background-color: $whiteColor;
+                    color: $primaryShadeColor;
+                    border: 2px solid $primaryColor;
+                    opacity: unset;
+                    cursor: pointer;
+                    outline: none;
+                    transition: background .2s ease, color .2s ease;
+                    &:first-child {
+                        margin-right: 16px;
+                    }
+                    &-active {
+                        border: 2px solid $primaryShadeColor;
+                        background-color: $primaryShadeColor;
+                        color: $whiteColor;
+                    }
+                    &:hover {
+                        background-color: $primaryColor;
+                        color: $whiteColor;
+                    }
+                    &:focus {
+                        border: 2px solid $primaryColor;
+                        background-color: $primaryLightColor;
+                        color: $whiteColor;
+                    }
+                    &:active {
+                        background-color: $primaryShadeColor;
+                        color: $whiteColor;
+                    }
+                }
+            }
+        }
         &-nav {                
             font-size: 14px;
             color: $greyColor;
@@ -26,7 +67,7 @@
             margin-right: 17px;
             font-size: 24px;
         }
-        &-left-column {
+        &-left {
             min-width: 296px;
             margin-right: 32px;
             &-banner {
@@ -97,6 +138,16 @@
                     @include stylesForButton;
                     align-self: flex-start;
                     color: $primaryColor;
+                    transition: background .2s ease, color .2s ease;
+                    &:focus {
+                        outline: none;
+                        color: $whiteColor;
+                        background-color: $primaryColor;
+                    }
+                    &:active {
+                        color: $primaryShadeColor;
+                        background-color: $whiteColor;
+                    }
                 }
                 &-range {
                     display: flex;
@@ -129,11 +180,12 @@
                                 }
                                 .noUi-origin {
                                     .noUi-handle {
+                                        width: unset;
                                         box-shadow: none;
                                         border: none;
                                         border-radius: unset;
                                         background: $primaryColor;
-                                        width: unset;
+                                        cursor: pointer;
                                         &:before {
                                             height: auto;
                                             top: -1px;
@@ -141,9 +193,20 @@
                                             border: 7px solid transparent;
                                             border-bottom: 13px solid $primaryColor;
                                             background: transparent;
+                                            transition: border .2s ease;
                                         }
                                         &:after {
                                             display: none;
+                                        }
+                                        &:hover {
+                                            &::before {
+                                                border-bottom: 13px solid $primaryLightColor;
+                                            }
+                                        }
+                                        &:focus {
+                                            &::before {
+                                                border-bottom: 13px solid $primaryShadeColor;
+                                            }
                                         }
                                     }
                                 }
@@ -153,7 +216,7 @@
                 }
             }
         }
-        &-right-column {
+        &-right {
             &-top {
                 display: flex;
                 align-items: center;
@@ -188,21 +251,36 @@
                             content: '';
                             position: absolute;
                             top: 50%;
-                            right: 50%;
-                            width: 7px;
+                            right: 30%;
+                            width: 12px;
                             height: 1px;
-                            background-color: $blackColor;
+                            background-color: $greyColor;
                             transform: rotate(45deg);
+                            transition: background .2s ease;
                         }
                         &::after {
                             content: '';
                             position: absolute;
                             top: 50%;
-                            right: 50%;
-                            width: 7px;
+                            right: 30%;
+                            width: 12px;
                             height: 1px;
-                            background-color: $blackColor;
+                            background-color: $greyColor;
                             transform: rotate(135deg);
+                            transition: background .2s ease;
+                        }
+                        &:hover {
+                            &::before,
+                            &::after {
+                                background-color: $primaryColor;
+                            }
+                        }
+                        &:active,
+                        &:focus {
+                            &::before,
+                            &::after {
+                                background-color: $primaryShadeColor;
+                            }
                         }
                     }
                     &[data-filter='category'] {
@@ -219,13 +297,16 @@
                     }
                 }
             }
-            &-filtered-list {
+            &-list {
                 @include stylesForList;
+                &-slide {
+                    display: grid;
+                    grid-template-columns: repeat(3, 296px);
+                    grid-template-rows: repeat(3, 420px);
+                    gap: 32px;
+                }
                 &-item {
                     @include stylesForCards;
-                    margin-top: 0 !important;
-                    width: 296px;
-                    height: 420px;
                 }
             }
         }

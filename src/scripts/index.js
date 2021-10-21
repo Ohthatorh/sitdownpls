@@ -116,7 +116,7 @@ const highrateButton = document.querySelector('.main__highrate-btn')
 highrateButton.addEventListener('click', e => {
     e.preventDefault()
     highrateButton.style.display = 'none'
-    const highrateHiddenItems = document.querySelectorAll('.main__highrate-list-item:nth-child(n + 9)')
+    const highrateHiddenItems = document.querySelectorAll('.main-product-item:nth-child(n + 9)')
     highrateHiddenItems.forEach (el => {
         el.style.display = 'block'
         setInterval(() => {

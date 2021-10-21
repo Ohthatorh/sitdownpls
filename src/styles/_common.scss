@@ -31,6 +31,100 @@ html {
     margin: -1px;
 }
 
+.main-product-item {
+    padding-top: 75px;
+    position: relative;
+    background-color: $greyLightColor;
+    border-radius: 10px;
+    text-align: center;
+    width: 296px;
+    min-height: 420px;
+    &-rate {
+        position: absolute;
+        text-align: center;
+        top: 16px;
+        left: 30px;
+        padding-left: 22px;
+        background-image: url('../img/sprite.svg#rate');
+        background-size: 200%;
+        background-position: -37px 2px;
+        background-repeat: no-repeat;
+        color: $secondaryColor;
+    }
+    &-description {
+        width: 237px;
+        position: absolute;
+        bottom: 29px;
+        left: 30px;
+        text-align: left;
+        &-name {
+            @include clearStyles;
+            margin-bottom: 23px;
+            &-link {
+                @include stylesForLink;
+                color: $blackColor;
+                font-size: 24px;
+                line-height: 31px;
+                font-weight: normal;
+            }
+        }
+        &-price {
+            @include clearStyles;
+            margin-bottom: 25px;
+            font-size: 16px;
+            color: $greyShadeColor;
+        }
+        &-btn {
+            @include buyButtonStyles;
+        }
+    }
+    &-card {
+        height: 118px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-evenly;
+    }
+
+    @media only screen and (max-width: 768px) {
+        width: 100%;
+        min-width: 140px;
+        padding-top: 54px;
+        min-height: 279px;
+        &-card {
+            height: unset;
+            display: block;
+        }
+        &-rate {
+            font-size: 12px;
+            top: 6px;
+            left: 14px;       
+            background-position: -30px -1px;             
+        }
+        &-img {
+            width: 108px;
+            height: 33px;
+        }
+        &-description {
+            width: 140px;
+            padding: 16px 16px 12px;
+            position: unset;
+            &-name {
+                margin-bottom: 18px;
+                &-link {
+                    font-size: 16px;
+                    line-height: 18px;
+                }
+            }
+            &-price {
+                margin-bottom: 18px;
+            }
+            &-btn {
+                padding: 9px 25px;
+            }
+        }
+    }
+}
+
 @media only screen and (max-width: 1366px) {
     .container {
         padding: 0 35px;

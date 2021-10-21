@@ -138,13 +138,10 @@
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             gap: 32px;
-            &-item {
-               @include stylesForCards;
-               &:nth-child(n + 9) {
-                    display: none;
-                    opacity: 0;
-                    transition: opacity .2s ease
-                }
+            .main-product-item:nth-child(n + 9) {
+                display: none;
+                opacity: 0;
+                transition: opacity .2s ease
             }
         }
         &-btn {
@@ -773,43 +770,6 @@
             &-list {
                 margin-bottom: 31px;
                 gap: 15px;
-                &-item {
-                    min-width: 140px;
-                    padding-top: 54px;
-                    min-height: 279px;
-                    &-card {
-                        height: unset;
-                        display: block;
-                    }
-                    &-rate {
-                        font-size: 12px;
-                        top: 6px;
-                        left: 14px;       
-                        background-position: -30px -1px;             
-                    }
-                    &-img {
-                        width: 108px;
-                        height: 33px;
-                    }
-                    &-description {
-                        width: 140px;
-                        padding: 16px 16px 12px;
-                        position: unset;
-                        &-name {
-                            margin-bottom: 18px;
-                            &-link {
-                                font-size: 16px;
-                                line-height: 18px;
-                            }
-                        }
-                        &-price {
-                            margin-bottom: 18px;
-                        }
-                        &-btn {
-                            padding: 9px 25px;
-                        }
-                    }
-                }
             }
         }
         &__middle-banner {

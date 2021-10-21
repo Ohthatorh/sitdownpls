@@ -2,7 +2,7 @@ const rangeFilter = document.getElementById('filterRange')
 const inputFilterRange1 = document.getElementById('input-filter-range-1')
 const inputFilterRange2 = document.getElementById('input-filter-range-2')
 const inputs = [inputFilterRange1, inputFilterRange2]
-const listFilters = document.querySelector('.main__catalog-right-column-filter-list')
+const listFilters = document.querySelector('.main__catalog-right-filter-list')
 noUiSlider.create(rangeFilter, {
     start: [2000, 150000],
     connect: true,
@@ -18,8 +18,8 @@ rangeFilter.noUiSlider.on('update', function (values, handle) {
         itemFilterPrice[0].children[0].textContent = 'До ' + Math.round(values[handle]).toLocaleString('ru-RU')
     } else {
         const priceFilterElement = `
-            <li class="main__catalog-right-column-filter-list-item" data-filter="price">
-                <button class="main__catalog-right-column-filter-list-item-btn">
+            <li class="main__catalog-right-filter-list-item" data-filter="price">
+                <button class="main__catalog-right-filter-list-item-btn">
                     ${Math.round(values[handle]).toLocaleString('ru-RU')} 
                 </button>
                 <span class="btn-close"></span>
@@ -61,7 +61,7 @@ document.addEventListener('click', (e) => {
                 const itemFilterSale = document.querySelectorAll('[data-filter="sales"]')
                 itemFilterSale[0].remove()
             } else {
-                const itemFilters = document.querySelectorAll ('.main__catalog-right-column-filter-list-item')
+                const itemFilters = document.querySelectorAll ('.main__catalog-right-filter-list-item')
                 itemFilters.forEach(el => {
                     if (el.children[0].textContent.replace(/\s/g, '').includes(e.target.parentNode.textContent.replace(/\s/g, ''))) el.remove()
                 })
@@ -74,8 +74,8 @@ document.addEventListener('click', (e) => {
                 textFilter = (e.target.parentNode.textContent.replace(/\s/g, '') === 'Неважно') ? 'Без скидки' : (!e.target.parentNode.textContent.includes('Более')) ? 'Менее 5000' : 'Более 5000'
             }
             const filterElement = `
-                <li class="main__catalog-right-column-filter-list-item" data-filter="${e.target.parentNode.dataset.type}">
-                    <button class="main__catalog-right-column-filter-list-item-btn">
+                <li class="main__catalog-right-filter-list-item" data-filter="${e.target.parentNode.dataset.type}">
+                    <button class="main__catalog-right-filter-list-item-btn">
                         ${textFilter}
                     </button>
                     <span class="btn-close"></span>

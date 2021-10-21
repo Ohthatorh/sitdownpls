@@ -233,64 +233,6 @@
     .checkbox:checked + .checkbox__span::after {
         opacity: 1;
     }
-    .checkbox:focus + .checkbox__span {
-        outline: 1px solid $primaryColor;
-    }
-}
-
-@mixin stylesForCards {
-    padding-top: 75px;
-    position: relative;
-    background-color: $greyLightColor;
-    border-radius: 10px;
-    text-align: center;
-    width: 296px;
-    min-height: 420px;
-    &-rate {
-        position: absolute;
-        text-align: center;
-        top: 16px;
-        left: 30px;
-        padding-left: 22px;
-        background-image: url('../img/sprite.svg#rate');
-        background-size: 200%;
-        background-position: -37px 2px;
-        background-repeat: no-repeat;
-        color: $secondaryColor;
-    }
-    &-description {
-        width: 237px;
-        position: absolute;
-        bottom: 29px;
-        left: 30px;
-        text-align: left;
-        &-name {
-            @include clearStyles;
-            margin-bottom: 23px;
-            &-link {
-                @include stylesForLink;
-                color: $blackColor;
-                font-size: 24px;
-                line-height: 31px;
-                font-weight: normal;
-            }
-        }
-        &-price {
-            @include clearStyles;
-            margin-bottom: 25px;
-            font-size: 16px;
-            color: $greyShadeColor;
-        }
-        &-btn {
-            @include buyButtonStyles;
-        }
-    }
-    &-card {
-        height: 118px;
-        display: flex;
-        align-items: flex-end;
-        justify-content: space-evenly;
-    }
 }
 
 @mixin stylesForArrow {

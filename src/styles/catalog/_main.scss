@@ -305,9 +305,6 @@
                     grid-template-rows: repeat(3, 420px);
                     gap: 32px;
                 }
-                &-item {
-                    @include stylesForCards;
-                }
             }
         }
     }

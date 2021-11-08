@@ -13,12 +13,12 @@ noUiSlider.create(rangeFilter, {
 })
 rangeFilter.noUiSlider.on('update', function (values, handle) {
     inputs[handle].value = Math.round(values[handle]).toLocaleString('ru-RU')
-    const itemFilterPrice = document.querySelectorAll('[data-filter="price"]')
+    const itemFilterPrice = document.querySelectorAll(`[data-filter="price-${handle}"]`)
     if (itemFilterPrice.length) {
-        itemFilterPrice[0].children[0].textContent = 'До ' + Math.round(values[handle]).toLocaleString('ru-RU')
+        itemFilterPrice[0].children[0].textContent = `${(handle === 0) ? `От ` : `До `} ${Math.round(values[handle]).toLocaleString('ru-RU')}`
     } else {
         const priceFilterElement = `
-            <li class="main__catalog-right-filter-list-item" data-filter="price">
+            <li class="main__catalog-right-filter-list-item" data-filter="price-${handle}"]">
                 <button class="main__catalog-right-filter-list-item-btn">
                     ${Math.round(values[handle]).toLocaleString('ru-RU')} 
                 </button>
@@ -45,6 +45,16 @@ const mainCatalogSwiper = new Swiper(('.main__catalog-swiper'), {
         },
     },
 })
+// const mainCatalogCategory = document.querySelector('.main__catalog-category-choice')
+// const mainChoiceCategory = new Choices(mainCatalogCategory, {
+//     searchEnabled: false,
+//     itemSelectText: '',
+//     classNames: {
+//         // list: 'choices__list-header-bot',
+//         // item: 'choices__item-header-bot'
+//     }
+// })
+document.querySelector(`[data-filter="price-0"]`).remove()
 document.addEventListener('click', (e) => {
     if (e.target.className === 'btn-close') {
         const filterCheckboxes = document.querySelectorAll(`[data-type="${e.target.parentNode.dataset.filter}"]`)
@@ -55,6 +65,7 @@ document.addEventListener('click', (e) => {
         })
         e.target.parentNode.remove()
     }
+    console.log(e.target)
     if (e.target.className === 'checkbox visually-hidden') {
         if (!e.target.checked) {
             if (e.target.parentNode.textContent.replace(/\s/g, '') === 'Неважно') {
@@ -83,5 +94,20 @@ document.addEventListener('click', (e) => {
             `
             listFilters.insertAdjacentHTML('beforeend', filterElement)
         }
+    }
+    if (e.target.className === 'main__catalog-left-filter-more') {
+        const countItems = (e.target.textContent.includes('12')) ? 13 : 8
+        for (let i = 0; i < countItems; i++) {
+            const filterItem = `
+                <label class="main__catalog-left-filter-checkbox checkbox__label" data-type="category">
+                        <input type="checkbox" name="checkbox" class="checkbox visually-hidden">
+                        <span class="checkbox__span">    
+                            Кровати
+                        </span>
+                </label>
+            `
+            e.target.parentNode.insertAdjacentHTML('beforeend', filterItem)
+        }
+        e.target.remove()
     }
 })

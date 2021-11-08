@@ -286,7 +286,8 @@
                     &[data-filter='category'] {
                         background-color: $limeColor;
                     }
-                    &[data-filter='price'] {
+                    &[data-filter='price-0'],
+                    &[data-filter='price-1'] {
                         background-color: $boneColor;
                     }
                     &[data-filter='sales'] {
@@ -304,6 +305,32 @@
                     grid-template-columns: repeat(3, 296px);
                     grid-template-rows: repeat(3, 420px);
                     gap: 32px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1366px) {
+    .main {
+        &__catalog {
+            &-columns {
+                position: relative;
+            }
+            &-left {
+                display: flex;
+                position: absolute;
+                top: 50px;
+                left: 0;
+                z-index: 2;
+                // &-filter,
+                // &-banner {
+                //     display: none;
+                // }
+            }
+            &-right {
+                &-top {
+                    margin-bottom: 88px;
                 }
             }
         }

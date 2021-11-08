@@ -1682,7 +1682,7 @@ html {
   background-color: #DAFFD1;
 }
 
-.main__catalog-right-filter-list-item[data-filter='price'] {
+.main__catalog-right-filter-list-item[data-filter='price-0'], .main__catalog-right-filter-list-item[data-filter='price-1'] {
   background-color: #FFF5D1;
 }
 
@@ -1708,6 +1708,24 @@ html {
   -ms-grid-rows: (420px)[3];
       grid-template-rows: repeat(3, 420px);
   gap: 32px;
+}
+
+@media only screen and (max-width: 1366px) {
+  .main__catalog-columns {
+    position: relative;
+  }
+  .main__catalog-left {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    z-index: 2;
+  }
+  .main__catalog-right-top {
+    margin-bottom: 88px;
+  }
 }
 
 .footer {

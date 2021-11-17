@@ -148,7 +148,7 @@
      <main class="main">
          <section class="main__catalog">
             <div class="main__catalog-content container">
-                  <nav class="main__catalog-nav">
+               <nav class="main__catalog-nav">
                      <a href="#" class="main__catalog-nav-link">
                         Главная
                      </a>
@@ -164,223 +164,342 @@
                      <a href="#" class="main__catalog-nav-link">
                         Прямые диваны
                      </a>
-                  </nav>
-                  <div class="main__catalog-columns">
-                     <div class="main__catalog-left">
-                        <p class="main__catalog-left-text">
-                           Фильтровать по:
-                        </p>
-                        <div class="main__catalog-left-filter">
-                           <p class="main__catalog-left-filter-text">
+               </nav>
+               <div class="main__catalog-grid">
+                  <p class="main__catalog-grid-text">
+                        Фильтровать по:
+                  </p>
+                  <div class="main__catalog-applied">
+                        <h2 class="main__catalog-title">
+                           Каталог
+                        </h2>
+                        <ul class="main__catalog-applied-list">
+                           <li class="main__catalog-applied-list-item" data-filter="category">
+                              <button class="main__catalog-applied-list-item-btn">
+                                 Диваны
+                              </button>
+                              <span class="btn-close"></span>
+                           </li>
+                           <li class="main__catalog-applied-list-item" data-filter="price-1">
+                              <button class="main__catalog-applied-list-item-btn">
+                                 До 150 000
+                              </button>
+                              <span class="btn-close"></span>
+                           </li>
+                           <li class="main__catalog-applied-list-item" data-filter="sales">
+                              <button class="main__catalog-applied-list-item-btn">
+                                 Без скидки
+                              </button>
+                              <span class="btn-close"></span>
+                           </li>
+                           <li class="main__catalog-applied-list-item" data-filter="color">
+                              <button class="main__catalog-applied-list-item-btn">
+                                 Оранжевый
+                              </button>
+                              <span class="btn-close"></span>
+                           </li>
+                        </ul>
+                  </div>
+                  <div class="main__catalog-filters">
+                        <div class="main__catalog-filters-item" tabindex="0">
+                           <p class="main__catalog-filters-item-text" data-filter="category">
                               Категория
                            </p>
-                           <label class="main__catalog-left-filter-checkbox checkbox__label" data-type="category">
-                              <input type="checkbox" name="checkbox" class="checkbox visually-hidden" checked>
-                              <span class="checkbox__span">    
-                              Диваны
-                              </span>
-                           </label>
-                           <label class="main__catalog-left-filter-checkbox checkbox__label" data-type="category">
-                              <input type="checkbox" name="checkbox" class="checkbox visually-hidden">
-                              <span class="checkbox__span">    
-                              Кресла
-                              </span>
-                           </label>
-                           <label class="main__catalog-left-filter-checkbox checkbox__label" data-type="category">
-                              <input type="checkbox" name="checkbox" class="checkbox visually-hidden">
-                              <span class="checkbox__span">    
-                              Пуфы
-                              </span>
-                           </label>
-                           <label class="main__catalog-left-filter-checkbox checkbox__label" data-type="category">
-                              <input type="checkbox" name="checkbox" class="checkbox visually-hidden">
-                              <span class="checkbox__span">    
-                              Кровати
-                              </span>
-                           </label>
-                           <label class="main__catalog-left-filter-checkbox checkbox__label" data-type="category">
-                              <input type="checkbox" name="checkbox" class="checkbox visually-hidden">
-                              <span class="checkbox__span">    
-                              Тумбы
-                              </span>
-                           </label>
-                           <label class="main__catalog-left-filter-checkbox checkbox__label" data-type="category">
-                              <input type="checkbox" name="checkbox" class="checkbox visually-hidden">
-                              <span class="checkbox__span">    
-                              Комоды
-                              </span>
-                           </label>
-                           <label class="main__catalog-left-filter-checkbox checkbox__label" data-type="category">
-                              <input type="checkbox" name="checkbox" class="checkbox visually-hidden">
-                              <span class="checkbox__span">    
-                              Стулья
-                              </span>
-                           </label>
-                           <label class="main__catalog-left-filter-checkbox checkbox__label" data-type="category">
-                              <input type="checkbox" name="checkbox" class="checkbox visually-hidden">
-                              <span class="checkbox__span">    
-                              Столы
-                              </span>
-                           </label>
-                           <label class="main__catalog-left-filter-checkbox checkbox__label" data-type="category">
-                              <input type="checkbox" name="checkbox" class="checkbox visually-hidden">
-                              <span class="checkbox__span">    
-                              Аксессуары
-                              </span>
-                           </label>
-                           <button class="main__catalog-left-filter-more">
-                              + еще 12
-                           </button>
-                        </div>
-                        <div class="main__catalog-left-filter">
-                           <p class="main__catalog-left-filter-text">
-                              Цена
-                           </p>
-                           <div class="main__catalog-left-filter-range">
-                              <label class="main__catalog-left-filter-range-label">
-                                 от
-                                 <input class="main__catalog-left-filter-range-input" type="text" id="input-filter-range-1">
+                           <div class="main__catalog-filters-item-content">
+                              <label class="main__catalog-filters-item-checkbox checkbox__label" data-type="category">
+                                 <input type="checkbox" name="checkbox" class="checkbox visually-hidden" checked>
+                                 <span class="checkbox__span">    
+                                 Диваны
+                                 </span>
                               </label>
-                              <label class="main__catalog-left-filter-range-label">
-                                 до
-                                 <input class="main__catalog-left-filter-range-input" type="text" id="input-filter-range-2">
+                              <label class="main__catalog-filters-item-checkbox checkbox__label" data-type="category">
+                                 <input type="checkbox" name="checkbox" class="checkbox visually-hidden">
+                                 <span class="checkbox__span">    
+                                 Кресла
+                                 </span>
                               </label>
-                              <div class="main__catalog-left-filter-range-line" id="filterRange"></div>
+                              <label class="main__catalog-filters-item-checkbox checkbox__label" data-type="category">
+                                 <input type="checkbox" name="checkbox" class="checkbox visually-hidden">
+                                 <span class="checkbox__span">    
+                                 Пуфы
+                                 </span>
+                              </label>
+                              <label class="main__catalog-filters-item-checkbox checkbox__label" data-type="category">
+                                 <input type="checkbox" name="checkbox" class="checkbox visually-hidden">
+                                 <span class="checkbox__span">    
+                                 Кровати
+                                 </span>
+                              </label>
+                              <label class="main__catalog-filters-item-checkbox checkbox__label" data-type="category">
+                                 <input type="checkbox" name="checkbox" class="checkbox visually-hidden">
+                                 <span class="checkbox__span">    
+                                 Тумбы
+                                 </span>
+                              </label>
+                              <label class="main__catalog-filters-item-checkbox checkbox__label" data-type="category">
+                                 <input type="checkbox" name="checkbox" class="checkbox visually-hidden">
+                                 <span class="checkbox__span">    
+                                 Комоды
+                                 </span>
+                              </label>
+                              <label class="main__catalog-filters-item-checkbox checkbox__label" data-type="category">
+                                 <input type="checkbox" name="checkbox" class="checkbox visually-hidden">
+                                 <span class="checkbox__span">    
+                                 Стулья
+                                 </span>
+                              </label>
+                              <label class="main__catalog-filters-item-checkbox checkbox__label" data-type="category">
+                                 <input type="checkbox" name="checkbox" class="checkbox visually-hidden">
+                                 <span class="checkbox__span">    
+                                 Столы
+                                 </span>
+                              </label>
+                              <label class="main__catalog-filters-item-checkbox checkbox__label" data-type="category">
+                                 <input type="checkbox" name="checkbox" class="checkbox visually-hidden">
+                                 <span class="checkbox__span">    
+                                 Аксессуары
+                                 </span>
+                              </label>
+                              <label class="main__catalog-filters-item-checkbox checkbox__label" data-type="category">
+                                 <input type="checkbox" name="checkbox" class="checkbox visually-hidden">
+                                 <span class="checkbox__span">    
+                                 Доп
+                                 </span>
+                              </label>
+                              <label class="main__catalog-filters-item-checkbox checkbox__label" data-type="category">
+                                 <input type="checkbox" name="checkbox" class="checkbox visually-hidden">
+                                 <span class="checkbox__span">    
+                                 Доп
+                                 </span>
+                              </label>
+                              <label class="main__catalog-filters-item-checkbox checkbox__label" data-type="category">
+                                 <input type="checkbox" name="checkbox" class="checkbox visually-hidden">
+                                 <span class="checkbox__span">    
+                                 Доп
+                                 </span>
+                              </label>
+                              <label class="main__catalog-filters-item-checkbox checkbox__label" data-type="category">
+                                 <input type="checkbox" name="checkbox" class="checkbox visually-hidden">
+                                 <span class="checkbox__span">    
+                                 Доп
+                                 </span>
+                              </label>
+                              <label class="main__catalog-filters-item-checkbox checkbox__label" data-type="category">
+                                 <input type="checkbox" name="checkbox" class="checkbox visually-hidden">
+                                 <span class="checkbox__span">    
+                                 Доп
+                                 </span>
+                              </label>
+                              <label class="main__catalog-filters-item-checkbox checkbox__label" data-type="category">
+                                 <input type="checkbox" name="checkbox" class="checkbox visually-hidden">
+                                 <span class="checkbox__span">    
+                                 Доп
+                                 </span>
+                              </label>
+                              <label class="main__catalog-filters-item-checkbox checkbox__label" data-type="category">
+                                 <input type="checkbox" name="checkbox" class="checkbox visually-hidden">
+                                 <span class="checkbox__span">    
+                                 Доп
+                                 </span>
+                              </label>
+                              <label class="main__catalog-filters-item-checkbox checkbox__label" data-type="category">
+                                 <input type="checkbox" name="checkbox" class="checkbox visually-hidden">
+                                 <span class="checkbox__span">    
+                                 Доп
+                                 </span>
+                              </label>
+                              <label class="main__catalog-filters-item-checkbox checkbox__label" data-type="category">
+                                 <input type="checkbox" name="checkbox" class="checkbox visually-hidden">
+                                 <span class="checkbox__span">    
+                                 Доп
+                                 </span>
+                              </label>
+                              <label class="main__catalog-filters-item-checkbox checkbox__label" data-type="category">
+                                 <input type="checkbox" name="checkbox" class="checkbox visually-hidden">
+                                 <span class="checkbox__span">    
+                                 Доп
+                                 </span>
+                              </label>
+                              <label class="main__catalog-filters-item-checkbox checkbox__label" data-type="category">
+                                 <input type="checkbox" name="checkbox" class="checkbox visually-hidden">
+                                 <span class="checkbox__span">    
+                                 Доп
+                                 </span>
+                              </label>
+                              <label class="main__catalog-filters-item-checkbox checkbox__label" data-type="category">
+                                 <input type="checkbox" name="checkbox" class="checkbox visually-hidden">
+                                 <span class="checkbox__span">    
+                                 Доп
+                                 </span>
+                              </label>   
+                              <button class="main__catalog-filters-item-more" data-type="category-filter-button">
+                              </button>                        
                            </div>
                         </div>
-                        <div class="main__catalog-left-filter">
-                           <p class="main__catalog-left-filter-text">
+                        <div class="main__catalog-filters-item" tabindex="0">
+                           <p class="main__catalog-filters-item-text" data-filter="price">
+                              Цена
+                           </p>
+                           <div class="main__catalog-filters-item-content">
+                              <div class="main__catalog-filters-item-range">
+                                 <label class="main__catalog-filters-item-range-label">
+                                    от
+                                    <input class="main__catalog-filters-item-range-input" type="text" id="input-filter-range-1">
+                                 </label>
+                                 <label class="main__catalog-filters-item-range-label">
+                                    до
+                                    <input class="main__catalog-filters-item-range-input" type="text" id="input-filter-range-2">
+                                 </label>
+                                 <div class="main__catalog-filters-item-range-line" id="filterRange"></div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="main__catalog-filters-item" tabindex="0">
+                           <p class="main__catalog-filters-item-text" data-filter="sales">
                               Скидка
                            </p>
-                           <label class="main__catalog-left-filter-checkbox checkbox__label" data-type="sales">
-                              <input type="checkbox" name="checkbox" class="checkbox visually-hidden">
-                              <span class="checkbox__span">    
-                              Более 5 000
-                              </span>
-                           </label>
-                           <label class="main__catalog-left-filter-checkbox checkbox__label" data-type="sales">
-                              <input type="checkbox" name="checkbox" class="checkbox visually-hidden">
-                              <span class="checkbox__span">    
-                              Менее 5 000
-                              </span>
-                           </label>
-                           <label class="main__catalog-left-filter-checkbox checkbox__label" data-type="sales">
-                              <input type="checkbox" name="checkbox" class="checkbox visually-hidden" checked>
-                              <span class="checkbox__span">    
-                              Не важно
-                              </span>
-                           </label>
+                           <div class="main__catalog-filters-item-content">
+                              <label class="main__catalog-filters-item-checkbox checkbox__label" data-type="sales">
+                                 <input type="checkbox" name="checkbox" class="checkbox visually-hidden">
+                                 <span class="checkbox__span">    
+                                 Более 5 000
+                                 </span>
+                              </label>
+                              <label class="main__catalog-filters-item-checkbox checkbox__label" data-type="sales">
+                                 <input type="checkbox" name="checkbox" class="checkbox visually-hidden">
+                                 <span class="checkbox__span">    
+                                 Менее 5 000
+                                 </span>
+                              </label>
+                              <label class="main__catalog-filters-item-checkbox checkbox__label" data-type="sales">
+                                 <input type="checkbox" name="checkbox" class="checkbox visually-hidden" checked>
+                                 <span class="checkbox__span">    
+                                 Не важно
+                                 </span>
+                              </label>
+                           </div>
                         </div>
-                        <div class="main__catalog-left-filter">
-                           <p class="main__catalog-left-filter-text">
+                        <div class="main__catalog-filters-item" tabindex="0">
+                           <p class="main__catalog-filters-item-text" data-filter="color">
                               Цвет
                            </p>
-                           <label class="main__catalog-left-filter-checkbox checkbox__label" data-type="color">
+                           <div class="main__catalog-filters-item-content">
+                           <label class="main__catalog-filters-item-checkbox checkbox__label" data-type="color">
                               <input type="checkbox" name="checkbox" class="checkbox visually-hidden">
                               <span class="checkbox__span">    
                               Коричневый
                               </span>
                            </label>
-                           <label class="main__catalog-left-filter-checkbox checkbox__label" data-type="color">
+                           <label class="main__catalog-filters-item-checkbox checkbox__label" data-type="color">
                               <input type="checkbox" name="checkbox" class="checkbox visually-hidden">
                               <span class="checkbox__span">    
                               Черный
                               </span>
                            </label>
-                           <label class="main__catalog-left-filter-checkbox checkbox__label" data-type="color">
+                           <label class="main__catalog-filters-item-checkbox checkbox__label" data-type="color">
                               <input type="checkbox" name="checkbox" class="checkbox visually-hidden">
                               <span class="checkbox__span">    
                               Бежевый
                               </span>
                            </label>
-                           <label class="main__catalog-left-filter-checkbox checkbox__label" data-type="color">
+                           <label class="main__catalog-filters-item-checkbox checkbox__label" data-type="color">
                               <input type="checkbox" name="checkbox" class="checkbox visually-hidden">
                               <span class="checkbox__span">    
                               Серый
                               </span>
                            </label>
-                           <label class="main__catalog-left-filter-checkbox checkbox__label" data-type="color">
+                           <label class="main__catalog-filters-item-checkbox checkbox__label" data-type="color">
                               <input type="checkbox" name="checkbox" class="checkbox visually-hidden">
                               <span class="checkbox__span">    
                               Белый
                               </span>
                            </label>
-                           <label class="main__catalog-left-filter-checkbox checkbox__label" data-type="color">
+                           <label class="main__catalog-filters-item-checkbox checkbox__label" data-type="color">
                               <input type="checkbox" name="checkbox" class="checkbox visually-hidden">
                               <span class="checkbox__span">    
                               Синий
                               </span>
                            </label>
-                           <label class="main__catalog-left-filter-checkbox checkbox__label" data-type="color">
+                           <label class="main__catalog-filters-item-checkbox checkbox__label" data-type="color">
                               <input type="checkbox" name="checkbox" class="checkbox visually-hidden" checked>
                               <span class="checkbox__span">    
                               Оранжевый
                               </span>
                            </label>
-                           <label class="main__catalog-left-filter-checkbox checkbox__label" data-type="color">
+                           <label class="main__catalog-filters-item-checkbox checkbox__label" data-type="color">
                               <input type="checkbox" name="checkbox" class="checkbox visually-hidden">
                               <span class="checkbox__span">    
                               Желтый
                               </span>
                            </label>
-                           <label class="main__catalog-left-filter-checkbox checkbox__label" data-type="color">
+                           <label class="main__catalog-filters-item-checkbox checkbox__label" data-type="color">
                               <input type="checkbox" name="checkbox" class="checkbox visually-hidden">
                               <span class="checkbox__span">    
                               Зеленый
                               </span>
                            </label>
-                           <button class="main__catalog-left-filter-more">
-                              + еще 7
-                           </button>
+                           <label class="main__catalog-filters-item-checkbox checkbox__label" data-type="color">
+                              <input type="checkbox" name="checkbox" class="checkbox visually-hidden">
+                              <span class="checkbox__span">    
+                              Доп
+                              </span>
+                           </label>
+                           <label class="main__catalog-filters-item-checkbox checkbox__label" data-type="color">
+                              <input type="checkbox" name="checkbox" class="checkbox visually-hidden">
+                              <span class="checkbox__span">    
+                              Доп
+                              </span>
+                           </label>
+                           <label class="main__catalog-filters-item-checkbox checkbox__label" data-type="color">
+                              <input type="checkbox" name="checkbox" class="checkbox visually-hidden">
+                              <span class="checkbox__span">    
+                              Доп
+                              </span>
+                           </label>
+                           <label class="main__catalog-filters-item-checkbox checkbox__label" data-type="color">
+                              <input type="checkbox" name="checkbox" class="checkbox visually-hidden">
+                              <span class="checkbox__span">    
+                              Доп
+                              </span>
+                           </label>
+                           <label class="main__catalog-filters-item-checkbox checkbox__label" data-type="color">
+                              <input type="checkbox" name="checkbox" class="checkbox visually-hidden">
+                              <span class="checkbox__span">    
+                              Доп
+                              </span>
+                           </label>
+                           <label class="main__catalog-filters-item-checkbox checkbox__label" data-type="color">
+                              <input type="checkbox" name="checkbox" class="checkbox visually-hidden">
+                              <span class="checkbox__span">    
+                              Доп
+                              </span>
+                           </label>
+                           <label class="main__catalog-filters-item-checkbox checkbox__label" data-type="color">
+                              <input type="checkbox" name="checkbox" class="checkbox visually-hidden">
+                              <span class="checkbox__span">    
+                              Доп
+                              </span>
+                           </label>
+                           <button class="main__catalog-filters-item-more" data-type="color-filter-button">
+                           </button>                            
                         </div>
-                        <div class="main__catalog-left-banner">
-                           <img src="img/catalog-banner.jpg" alt="Баннер Оксфорд" class="main__catalog-left-banner-img">
-                           <div class="main__catalog-left-banner-description">
-                              <p class="main__catalog-left-banner-text">
+                        </div>
+                        <div class="main__catalog-filters-banner">
+                           <img src="img/catalog-banner.jpg" alt="Баннер Оксфорд" class="main__catalog-filters-banner-img">
+                           <div class="main__catalog-filters-banner-description">
+                              <p class="main__catalog-filters-banner-text">
                                  Оксфорд 1950
                               </p>
-                              <p class="main__catalog-left-banner-smalltext">
+                              <p class="main__catalog-filters-banner-smalltext">
                                  Новая коллекция изысканных кресел
                               </p>
-                              <a href="#" class="main__catalog-left-banner-link">В каталог <span class="link-arrow"></span></a>
+                              <a href="#" class="main__catalog-filters-banner-link">В каталог <span class="link-arrow"></span></a>
                            </div>
                         </div>
-                     </div>
-                     <div class="main__catalog-right main__catalog-swiper swiper-container">
-                        <div class="main__catalog-right-top">
-                           <h2 class="main__catalog-title">
-                              Каталог
-                           </h2>
-                           <ul class="main__catalog-right-filter-list">
-                              <li class="main__catalog-right-filter-list-item" data-filter="category">
-                                 <button class="main__catalog-right-filter-list-item-btn">
-                                    Диваны
-                                 </button>
-                                 <span class="btn-close"></span>
-                              </li>
-                              <li class="main__catalog-right-filter-list-item" data-filter="price-1">
-                                 <button class="main__catalog-right-filter-list-item-btn">
-                                    До 150 000
-                                 </button>
-                                 <span class="btn-close"></span>
-                              </li>
-                              <li class="main__catalog-right-filter-list-item" data-filter="sales">
-                                 <button class="main__catalog-right-filter-list-item-btn">
-                                    Без скидки
-                                 </button>
-                                 <span class="btn-close"></span>
-                              </li>
-                              <li class="main__catalog-right-filter-list-item" data-filter="color">
-                                 <button class="main__catalog-right-filter-list-item-btn">
-                                    Оранжевый
-                                 </button>
-                                 <span class="btn-close"></span>
-                              </li>
-                           </ul>
-                        </div>
-                        <ul class="main__catalog-right-list swiper-wrapper">
-                           <li class="main__catalog-right-list-slide swiper-slide">
-                              <div class="main-product-item">
+                  </div>
+                  <div class="main__catalog-grid-swiper swiper-container">
+                        <ul class="main__catalog-grid-swiper-list swiper-wrapper">
+                           <li class="main-product-item swiper-slide">
                                  <article class="main-product-item-card">
                                     <p class="main-product-item-rate">5,0</p>
                                     <img src="img/highrate-1.png" class="main-product-item-img" alt="Картинка в товаре">
@@ -397,8 +516,8 @@
                                        </button>
                                     </div>
                                  </article>
-                              </div>
-                              <div class="main-product-item">
+                           </li>
+                           <li class="main-product-item swiper-slide">
                                  <article class="main-product-item-card">
                                     <p class="main-product-item-rate">4,9</p>
                                     <img src="img/highrate-2.png" class="main-product-item-img" alt="Картинка в товаре">
@@ -415,8 +534,8 @@
                                        </button>
                                     </div>
                                  </article>
-                              </div>
-                              <div class="main-product-item">
+                           </li>
+                           <li class="main-product-item swiper-slide">
                                  <article class="main-product-item-card">
                                     <p class="main-product-item-rate">4,8</p>
                                     <img src="img/highrate-3.png" class="main-product-item-img" alt="Картинка в товаре">
@@ -433,8 +552,8 @@
                                        </button>
                                     </div>
                                  </article>
-                              </div>
-                              <div class="main-product-item">
+                           </li>
+                           <li class="main-product-item swiper-slide">
                                  <article class="main-product-item-card">
                                     <p class="main-product-item-rate">4,8</p>
                                     <img src="img/highrate-4.png" class="main-product-item-img" alt="Картинка в товаре">
@@ -451,8 +570,8 @@
                                        </button>
                                     </div>
                                  </article>
-                              </div>
-                              <div class="main-product-item">
+                           </li>
+                           <li class="main-product-item swiper-slide">
                                  <article class="main-product-item-card">
                                     <p class="main-product-item-rate">4,8</p>
                                     <img src="img/highrate-5.png" class="main-product-item-img" alt="Картинка в товаре">
@@ -469,8 +588,8 @@
                                        </button>
                                     </div>
                                  </article>
-                              </div>
-                              <div class="main-product-item">
+                           </li>
+                           <li class="main-product-item swiper-slide">
                                  <article class="main-product-item-card">
                                     <p class="main-product-item-rate">4,8</p>
                                     <img src="img/highrate-6.png" class="main-product-item-img" alt="Картинка в товаре">
@@ -487,8 +606,8 @@
                                        </button>
                                     </div>
                                  </article>
-                              </div>
-                              <div class="main-product-item">
+                           </li>
+                           <li class="main-product-item swiper-slide">
                                  <article class="main-product-item-card">
                                     <p class="main-product-item-rate">4,8</p>
                                     <img src="img/highrate-7.png" class="main-product-item-img" alt="Картинка в товаре">
@@ -505,8 +624,8 @@
                                        </button>
                                     </div>
                                  </article>
-                              </div>
-                              <div class="main-product-item">
+                           </li>
+                           <li class="main-product-item swiper-slide">
                                  <article class="main-product-item-card">
                                     <p class="main-product-item-rate">4,7</p>
                                     <img src="img/highrate-8.png" class="main-product-item-img" alt="Картинка в товаре">
@@ -523,8 +642,8 @@
                                        </button>
                                     </div>
                                  </article>
-                              </div>
-                              <div class="main-product-item">
+                           </li>
+                           <li class="main-product-item swiper-slide">
                                  <article class="main-product-item-card">
                                     <p class="main-product-item-rate">4,7</p>
                                     <img src="img/highrate-9.png" class="main-product-item-img" alt="Картинка в товаре">
@@ -541,10 +660,8 @@
                                        </button>
                                     </div>
                                  </article>
-                              </div>
                            </li>
-                           <li class="main__catalog-right-list-slide swiper-slide">
-                              <div class="main-product-item">
+                           <li class="main-product-item swiper-slide">
                                  <article class="main-product-item-card">
                                     <p class="main-product-item-rate">4,6</p>
                                     <img src="img/highrate-10.png" class="main-product-item-img" alt="Картинка в товаре">
@@ -561,8 +678,8 @@
                                        </button>
                                     </div>
                                  </article>
-                              </div>
-                              <div class="main-product-item">
+                           </li>
+                           <li class="main-product-item swiper-slide">
                                  <article class="main-product-item-card">
                                     <p class="main-product-item-rate">4,6</p>
                                     <img src="img/highrate-11.png" class="main-product-item-img" alt="Картинка в товаре">
@@ -579,8 +696,8 @@
                                        </button>
                                     </div>
                                  </article>
-                              </div>
-                              <div class="main-product-item">
+                           </li>
+                           <li class="main-product-item swiper-slide">
                                  <article class="main-product-item-card">
                                     <p class="main-product-item-rate">4,6</p>
                                     <img src="img/highrate-12.png" class="main-product-item-img" alt="Картинка в товаре">
@@ -597,8 +714,8 @@
                                        </button>
                                     </div>
                                  </article>
-                              </div>
-                              <div class="main-product-item">
+                           </li>
+                           <li class="main-product-item swiper-slide">
                                  <article class="main-product-item-card">
                                     <p class="main-product-item-rate">4,6</p>
                                     <img src="img/highrate-13.png" class="main-product-item-img" alt="Картинка в товаре">
@@ -615,8 +732,8 @@
                                        </button>
                                     </div>
                                  </article>
-                              </div>
-                              <div class="main-product-item">
+                           </li>
+                           <li class="main-product-item swiper-slide">
                                  <article class="main-product-item-card">
                                     <p class="main-product-item-rate">4,6</p>
                                     <img src="img/highrate-14.png" class="main-product-item-img" alt="Картинка в товаре">
@@ -633,8 +750,8 @@
                                        </button>
                                     </div>
                                  </article>
-                              </div>
-                              <div class="main-product-item">
+                           </li>
+                           <li class="main-product-item swiper-slide">
                                  <article class="main-product-item-card">
                                     <p class="main-product-item-rate">4,5</p>
                                     <img src="img/highrate-15.png" class="main-product-item-img" alt="Картинка в товаре">
@@ -651,8 +768,8 @@
                                        </button>
                                     </div>
                                  </article>
-                              </div>
-                              <div class="main-product-item">
+                           </li>
+                           <li class="main-product-item swiper-slide">
                                  <article class="main-product-item-card">
                                     <p class="main-product-item-rate">4,5</p>
                                     <img src="img/highrate-16.png" class="main-product-item-img" alt="Картинка в товаре">
@@ -669,8 +786,8 @@
                                        </button>
                                     </div>
                                  </article>
-                              </div>
-                              <div class="main-product-item">
+                           </li>
+                           <li class="main-product-item swiper-slide">
                                  <article class="main-product-item-card">
                                     <p class="main-product-item-rate">4,5</p>
                                     <img src="img/highrate-17.png" class="main-product-item-img" alt="Картинка в товаре">
@@ -687,8 +804,8 @@
                                        </button>
                                     </div>
                                  </article>
-                              </div>
-                              <div class="main-product-item">
+                           </li>
+                           <li class="main-product-item swiper-slide">
                                  <article class="main-product-item-card">
                                     <p class="main-product-item-rate">4,4</p>
                                     <img src="img/highrate-18.png" class="main-product-item-img" alt="Картинка в товаре">
@@ -705,12 +822,11 @@
                                        </button>
                                     </div>
                                  </article>
-                              </div>
                            </li>
                         </ul>
-                     </div>
-                     <div class="main__catalog-swiper-pagination swiper-pagination"></div>
                   </div>
+               </div>
+               <div class="main__catalog-swiper-pagination"></div>
             </div>
          </section>
      </main>

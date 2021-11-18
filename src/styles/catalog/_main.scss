@@ -363,12 +363,14 @@
                     grid-area: text;
                 }
                 &-swiper {
+                    padding-top: 0;
                     grid-area: swiper;
                 }
             }
             &-filters {
                 display: flex;
                 grid-area: filters;
+                margin-bottom: 16px;
                 &-item {
                     &-text {
                         width: 187px;
@@ -408,6 +410,9 @@
                         background-color: $greyLightColor;
                         border-radius: 0 0 10px 10px;
                     }
+                    &-range {
+                        flex-direction: column;
+                    }
                     &.filter-active {
                         .main__catalog-filters-item-content {
                             display: flex;
@@ -423,6 +428,9 @@
                     }
                     &:nth-child(2) {
                         margin-bottom: 0;
+                        .main__catalog-filters-item-text {
+                            margin-bottom: 0;
+                        }
                     }
                     &:nth-child(3) {
                         margin-bottom: 0;
@@ -455,9 +463,10 @@
                 }
             }
             &-filters {
+                width: 440px;
+                margin-bottom: 23px;
                 flex-wrap: wrap;
                 grid-row-gap: 11px;
-                margin-bottom: 23px;
             }
             &-applied {
                 margin-bottom: 29px;
@@ -486,9 +495,28 @@
                 }
             }
             &-filters {
+                width: 300px;
                 &-item {
                     &-text {
                         width: 140px;
+                    }
+                    &-content {
+                        padding: 10px 15px;
+                    }
+                    &-checkbox {
+                        &.checkbox__label {
+                            padding-left: 22px;
+                            font-size: 14px;
+                        }
+                    }
+                    &-range {
+                        &-input {
+                            width: 80px;
+                            font-size: 14px;
+                        }
+                    }
+                    &-more {
+                        font-size: 14px;
                     }
                     &:not(:last-child) {
                         margin-right: 0;

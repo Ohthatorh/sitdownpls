@@ -1906,6 +1906,7 @@ html {
   }
   .main__catalog-filters {
     width: 300px;
+    margin-right: 0;
   }
   .main__catalog-filters-item-text {
     width: 140px;

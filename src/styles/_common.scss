@@ -21,6 +21,17 @@ html {
     max-width: $containerWidth;
     margin: 0 auto;
     padding: 0 50px;
+    @media only screen and (max-width: 1366px) {
+        padding: 0 35px;
+    }
+
+    @media only screen and (max-width: 1024px) {
+        padding: 0 72px;
+    }
+
+    @media only screen and (max-width: 768px) {
+        padding: 0 12px;
+    }
 }
 
 .visually-hidden {
@@ -128,20 +139,23 @@ html {
     }
 }
 
-@media only screen and (max-width: 1366px) {
-    .container {
-        padding: 0 35px;
+.navigation {
+    font-size: 14px;
+    color: $greyColor;
+    &-link {
+        @include stylesForLink;
+        margin-right: 5px;
+        color: $greyColor;
+        &:last-child {
+            color: $primaryShadeColor;
+        }
     }
-}
-
-@media only screen and (max-width: 1024px) {
-    .container {
-        padding: 0 72px;
+    @media only screen and (max-width: 1366px) {
+        &-link {
+            margin-right: 2px;
+        }
     }
-}
-
-@media only screen and (max-width: 768px) {
-    .container {
-        padding: 0 12px;
+    @media only screen and (max-width: 768px) {
+        display: none;
     }
 }

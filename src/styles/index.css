@@ -46,6 +46,24 @@ html {
   padding: 0 50px;
 }
 
+@media only screen and (max-width: 1366px) {
+  .container {
+    padding: 0 35px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .container {
+    padding: 0 72px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+    padding: 0 12px;
+  }
+}
+
 .visually-hidden {
   position: absolute;
   clip: rect(0 0 0 0);
@@ -208,21 +226,32 @@ html {
   }
 }
 
-@media only screen and (max-width: 1366px) {
-  .container {
-    padding: 0 35px;
-  }
+.navigation {
+  font-size: 14px;
+  color: #999;
 }
 
-@media only screen and (max-width: 1024px) {
-  .container {
-    padding: 0 72px;
+.navigation-link {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  margin-right: 5px;
+  color: #999;
+}
+
+.navigation-link:last-child {
+  color: #7033AC;
+}
+
+@media only screen and (max-width: 1366px) {
+  .navigation-link {
+    margin-right: 2px;
   }
 }
 
 @media only screen and (max-width: 768px) {
-  .container {
-    padding: 0 12px;
+  .navigation {
+    display: none;
   }
 }
 

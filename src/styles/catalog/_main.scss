@@ -12,6 +12,9 @@
 }
 .main {
     &__catalog {
+        .navigation {
+            margin-bottom: 32px;
+        }
         &-content {
             padding-bottom: 133px;
             position: relative;
@@ -54,19 +57,6 @@
                         background-color: $primaryShadeColor;
                         color: $whiteColor;
                     }
-                }
-            }
-        }
-        &-nav {                
-            font-size: 14px;
-            color: $greyColor;
-            margin-bottom: 32px;
-            &-link {
-                @include stylesForLink;
-                margin-right: 5px;
-                color: $greyColor;
-                &:last-child {
-                    color: $primaryShadeColor;
                 }
             }
         }
@@ -342,11 +332,6 @@
                     }
                 }
             }
-            &-nav {
-                &-link {
-                    margin-right: 2px;
-                }
-            }
             &-applied {
                 grid-area: applied;
             }
@@ -483,9 +468,6 @@
         &__catalog {
             &-title {
                 margin-bottom: 10px;
-            }
-            &-nav {
-                display: none;
             }
             &-applied {
                 display: block;

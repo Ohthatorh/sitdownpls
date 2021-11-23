@@ -4,47 +4,35 @@
 .main {
     &__content {
         padding-bottom: 70px;
-        .navigation {
-            margin-bottom: 31px;
-        }
-        &-title {
+        h2 {
             @include stylesForTitle;
             margin-bottom: 32px;
             font-size: 32px;
         }
-        &-warranty {
-            display: flex;
-            width: 624px;
-            &-text {
-                font-size: 24px;
-                line-height: 36px;
-            }
-            &-pen {
-                margin-right: 32px;
-            }
+        .navigation {
+            margin-bottom: 28px;
         }
-        &-info {
-            margin-bottom: 29px;
-            &-item {
+        div {
+            div {
                 width: 842px;
-                &-subtitle {
+                h3 {
                     @include stylesForTitle;
                     margin-bottom: 15px;
                     font-size: 24px;
                 }
-                &-text {
+                p {
                     @include clearStyles;
                     line-height: 29px;
                 }
-                &-list {
+                ul {
                     @include stylesForList;
-                    &-item {
+                    li {
                         display: flex;
                         flex-wrap: wrap;
                         &:not(:last-child) {
                             margin-bottom: 14px;
                         }
-                        .marker {
+                        span {
                             height: 20px;
                             width: 20px;
                             margin-right: 17px;
@@ -52,8 +40,8 @@
                             background-repeat: no-repeat;
                             background-position: center;
                             background-size: cover;
-                            transform: translateY(6px);
-                            &-number {
+                            transform: translate(3px);
+                            span {
                                 @include clearStyles;
                                 color: $secondaryColor;
                                 font-weight: 600;
@@ -69,49 +57,63 @@
                             }
                         }
                     }
-                    &-subtext {
+                    p {
                         @include clearStyles;
                         width: 100%;
-                        margin-bottom: 17px;
+                    }
+                    h4 {
+                        @include clearStyles;
+                        margin-bottom: 13px;
                         font-weight: 600;
                         color: $secondaryColor;
-                    }
-                    &-text {
-                        @include clearStyles;
-                        line-height: 28px;
                     }
                 }
                 &:not(:last-child) {
                     margin-bottom: 35px;
                 }
                 &:nth-child(2) {
-                    .main__content-info-item-list-text {
+                    p {
                         width: 587px;
-                        line-height: 24px;
+                        line-height: 25px;
                     }
-                    .main__content-info-item-list-item {
+                    li {
                         &:not(:last-child) {
-                            margin-bottom: 12px;
+                            margin-bottom: 8px;
                         }
                     }
                 }
                 &:nth-child(3) {
-                    margin-bottom: 41px;
+                    margin-bottom: 37px;
                 }
                 &:nth-child(4) {
-                    .main__content-info-item-list-text {
+                    p {
                         width: 812px;
                         line-height: 29px;
                     }
-                    .main__content-info-item-list-item {
+                    li {
                         &:not(:last-child) {
                             margin-bottom: 11px;
                         }
                     }
-                    .marker {
+                    span {
                         margin-right: 6px;
+                        transform: translateY(2px);
                     }
                 }
+            }
+            &:not(:last-child) {
+                margin-bottom: 29px;
+            }
+        }
+        .content {
+            display: flex;
+            width: 624px;
+            p {
+                font-size: 24px;
+                line-height: 36px;
+            }
+            img {
+                margin-right: 32px;
             }
         }
     }

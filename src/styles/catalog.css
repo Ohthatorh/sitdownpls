@@ -1755,6 +1755,9 @@ html {
   margin: 0;
   padding: 0;
   list-style-type: none;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
 }
 
 @media only screen and (max-width: 1366px) {

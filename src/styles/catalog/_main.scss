@@ -313,6 +313,7 @@
                 width: 100%;
                 &-list {
                     @include stylesForList;
+                    height: min-content;
                 }
             }
         }

@@ -4,22 +4,22 @@
 }
 
 @mixin stylesForLink {
-    @include clearStyles();
+    @include clearStyles;
     text-decoration: none;
 }
 
 @mixin stylesForList {
-    @include clearStyles();
+    @include clearStyles;
     list-style-type: none;
 }
 
 @mixin stylesForInput {
-    @include clearStyles();
+    @include clearStyles;
     border: none;
 }
 
 @mixin stylesForButton {
-    @include clearStyles();
+    @include clearStyles;
     border: none;
     background-color: transparent;
     cursor: pointer;
@@ -147,7 +147,7 @@
 }
 
 @mixin stylesForMainInput {
-    @include stylesForInput();
+    @include stylesForInput;
     border: 2px solid $greyLightColor;
     color: $blackColor;
     background-color: $greyLightColor;
@@ -295,5 +295,37 @@
             width: 5px;
             height: 5px;
         }
+    }
+}
+
+@mixin stylesForTel {
+    @include stylesForLink;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: $secondaryColor;
+    transition: color .2s ease;
+    #phone-svg {
+        transition: fill .2s ease;
+    }
+    &:hover {
+        #phone-svg {
+            fill: $secondaryLightColor;
+        }
+        color: $secondaryLightColor;
+    }
+    &:focus {
+        #phone-svg {
+            fill: $secondaryColor;
+        }
+        outline: none;
+        background-color: $boneColor;
+    }
+    &:active {
+        #phone-svg {
+            fill: $secondaryShadeColor;
+        }
+        background-color: unset;
+        color: $secondaryShadeColor;
     }
 }

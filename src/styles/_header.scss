@@ -110,35 +110,7 @@
             }
         }
         &-tel {
-            @include stylesForLink;
-            display: flex;
-            align-items: center;
-            font-size: 14px;
-            color: $secondaryColor;
-            transition: color .2s ease;
-            #phone-svg {
-                transition: fill .2s ease;
-            }
-            &:hover {
-                #phone-svg {
-                    fill: $secondaryLightColor;
-                }
-                color: $secondaryLightColor;
-            }
-            &:focus {
-                #phone-svg {
-                    fill: $secondaryColor;
-                }
-                outline: none;
-                background-color: $boneColor;
-            }
-            &:active {
-                #phone-svg {
-                    fill: $secondaryShadeColor;
-                }
-                background-color: unset;
-                color: $secondaryShadeColor;
-            }
+            @include stylesForTel;
         }
         &-list {
             @include stylesForList;

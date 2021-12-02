@@ -159,3 +159,71 @@ html {
         display: none;
     }
 }
+
+.call-form {
+    .just-validate-tooltip-container {
+        margin-bottom: 28px;
+    }
+    &-title {
+        @include stylesForTitle;
+    }
+    &-text {
+        @include clearStyles;
+    }
+    &-input {
+        @include stylesForMainInput;
+        width: 100%;
+        padding: 17px;
+        border-radius: 10px;
+    }
+    &-button {
+        @include stylesForMainButton;
+        padding: 16px 32px;
+        margin-bottom: 11px;
+    }
+    &-checkbox {
+        @include stylesForCheckbox;
+        font-size: 14px;
+        &-link {
+            color: $primaryColor;
+        }
+    }
+    .js-validate-error-label {
+        font-size: 12px;
+        line-height: 16px;
+        color: $redInputColor !important;
+        background: unset;
+    }
+    .js-validate-error-field {
+        border: 2px solid $redInputColor !important;
+    }
+    .js-validate-success-field {
+        border: 2px solid $greenInputColor;
+    }
+}
+
+.modal-close {
+    @include stylesForButton;
+    position: absolute;
+    top: 20px;
+    right: 19px;
+    width: 25px;
+    height: 25px;
+    background-color: transparent;
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 1px;
+        height: 100%;
+        background-color: $blackColor;
+    }
+    &::before {
+        transform: rotate(45deg);
+    }
+    &::after {
+        transform: rotate(-45deg);
+    }
+}

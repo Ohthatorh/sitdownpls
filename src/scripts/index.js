@@ -52,66 +52,6 @@ const mainUsefulSwiper = new Swiper(('.main__useful-swiper'), {
     }
 })
 
-const selectorEl = document.getElementsByName('tel')
-const im = new Inputmask('+7 (999)-999-99-99')
-im.mask(selectorEl)
-new JustValidate('.js-form', {
-    rules: {
-        name: {
-            required: true,
-            minLength: 2,
-            maxLength: 20
-        },
-        tel: {
-            required: true,
-            function: () => {
-                const phone = selectorEl[0].inputmask.unmaskedvalue();
-                return Number(phone) && phone.length === 10;
-            }
-        },
-        mail: {
-            required: true,
-            email: true
-        },
-        checkbox: {
-            required: true
-        }
-    },
-    focusWrongField: true,
-    messages: {
-        name: {
-            required: 'Поле "Имя" обязательно для заполнения',
-            minLength: 'Поле "Имя" введено некорректно, минимум 2 знака',
-            maxLength: 'Поле "Имя" введено некорректно, максимум 20 знаков'
-        },
-        tel: {
-            required: 'Поле "Телефон" обязательно для заполнения',
-            function: 'Заполните поле "Телефон" до конца'
-        },
-        email: {
-            required: 'Поле "Email" обязательно для заполнения',
-            email: 'Недопустимый формат'
-        },
-        checkbox: {
-            required: 'Необходимо принять пользовательское соглашение'
-        },
-    },
-    submitHandler: function(form) {
-        let formData = new FormData(form);
-        let xhr = new XMLHttpRequest();
-        xhr.onreadystatechange = function() {
-            if (xhr.readyState === 4) {
-                if (xhr.status === 200) {
-                   console.log('success')
-                }
-            }
-        }
-        xhr.open('POST', 'mail.php', true);
-        xhr.send(formData);
-        form.reset();
-    }
-})
-
 const highrateButton = document.querySelector('.main__highrate-btn')
 highrateButton.addEventListener('click', e => {
     e.preventDefault()
@@ -122,12 +62,5 @@ highrateButton.addEventListener('click', e => {
         setInterval(() => {
             el.style.opacity = 1
         }, 500)
-    })
-})
-const contactUsInputs = document.querySelectorAll('.main__contactus-form-input')
-const contactUsButton = document.querySelector('.main__contactus-form-button')
-contactUsButton.addEventListener('click', () => {
-    contactUsInputs.forEach (el => {
-        if (!el.classList.contains('js-validate-error-field')) el.classList.add('js-validate-success-field')
     })
 })

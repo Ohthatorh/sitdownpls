@@ -1,6 +1,6 @@
-const selectorEl = document.getElementsByName('tel');
-const im = new Inputmask('+7 (999)-999-99-99');
-im.mask(selectorEl);
+const selectorEl = document.getElementsByName('tel')
+const im = new Inputmask('+7 (999)-999-99-99')
+im.mask(selectorEl)
 new JustValidate('.js-form', {
     rules: {
         name: {
@@ -56,4 +56,11 @@ new JustValidate('.js-form', {
         xhr.send(formData);
         form.reset();
     }
+})
+const callInputs = document.querySelectorAll('.call-form-input')
+const callButton = document.querySelector('.call-form-button')
+callButton.addEventListener('click', () => {
+    callInputs.forEach (el => {
+        if (!el.classList.contains('js-validate-error-field')) el.classList.add('js-validate-success-field')
+    })
 })

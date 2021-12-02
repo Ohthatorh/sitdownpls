@@ -254,6 +254,222 @@ html {
   }
 }
 
+.call-form .just-validate-tooltip-container {
+  margin-bottom: 28px;
+}
+
+.call-form-title {
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+  font-size: 32px;
+  color: #333;
+}
+
+@media only screen and (max-width: 768px) {
+  .call-form-title {
+    font-size: 24px;
+  }
+}
+
+.call-form-text {
+  margin: 0;
+  padding: 0;
+}
+
+.call-form-input {
+  margin: 0;
+  padding: 0;
+  border: none;
+  border: 2px solid #F6F6F6;
+  color: #333;
+  background-color: #F6F6F6;
+  -webkit-transition: background .2s ease;
+  transition: background .2s ease;
+  width: 100%;
+  padding: 17px;
+  border-radius: 10px;
+}
+
+.call-form-input:hover {
+  background-color: #EAEAEA;
+}
+
+.call-form-input:focus {
+  outline: none;
+  background-color: #F8EFFF;
+  border-color: #A65CF0;
+}
+
+.call-form-input::-webkit-input-placeholder {
+  color: #999;
+}
+
+.call-form-input:-ms-input-placeholder {
+  color: #999;
+}
+
+.call-form-input::-ms-input-placeholder {
+  color: #999;
+}
+
+.call-form-input::placeholder {
+  color: #999;
+}
+
+.call-form-button {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  border-radius: 10px;
+  background-color: #A65CF0;
+  font-weight: 700;
+  color: #FFF;
+  -webkit-transition: background .2s ease, border .2s ease;
+  transition: background .2s ease, border .2s ease;
+  border: 2px solid #A65CF0;
+  padding: 16px 32px;
+  margin-bottom: 11px;
+}
+
+.call-form-button:hover {
+  background-color: #C998FB;
+}
+
+.call-form-button:focus {
+  outline: none;
+  border-color: #7033AC;
+}
+
+.call-form-button:active {
+  background-color: #7033AC;
+}
+
+@media only screen and (max-width: 1366px) {
+  .call-form-button {
+    padding: 19px 49px;
+  }
+}
+
+.call-form-checkbox {
+  display: block;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.call-form-checkbox.checkbox__label {
+  position: relative;
+  display: inline-block;
+  padding-left: 22px;
+}
+
+.call-form-checkbox .checkbox {
+  position: absolute;
+  opacity: 0;
+}
+
+.call-form-checkbox .checkbox__span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 2px;
+}
+
+.call-form-checkbox .checkbox__span::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border: 1px solid #999;
+  border-radius: 2px;
+}
+
+.call-form-checkbox .checkbox__span::after {
+  content: '';
+  position: absolute;
+  left: 6px;
+  top: 3px;
+  width: 3px;
+  height: 6px;
+  border: solid #FFF;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  -webkit-transition: border .2s ease-in-out, opacity .2s ease-in-out;
+  transition: border .2s ease-in-out, opacity .2s ease-in-out;
+  opacity: 0;
+}
+
+.call-form-checkbox .checkbox:checked + .checkbox__span::before {
+  border-color: #A65CF0;
+  background-color: #A65CF0;
+}
+
+.call-form-checkbox .checkbox:checked + .checkbox__span::after {
+  opacity: 1;
+}
+
+.call-form-checkbox-link {
+  color: #A65CF0;
+}
+
+.call-form .js-validate-error-label {
+  font-size: 12px;
+  line-height: 16px;
+  color: #FF6972 !important;
+  background: unset;
+}
+
+.call-form .js-validate-error-field {
+  border: 2px solid #FF6972 !important;
+}
+
+.call-form .js-validate-success-field {
+  border: 2px solid #B8EC64;
+}
+
+.modal-close {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 19px;
+  width: 25px;
+  height: 25px;
+  background-color: transparent;
+}
+
+.modal-close::before, .modal-close::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 1px;
+  height: 100%;
+  background-color: #333;
+}
+
+.modal-close::before {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.modal-close::after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
 .header__top-row {
   padding: 16px 0;
   background-color: #F6F6F6;

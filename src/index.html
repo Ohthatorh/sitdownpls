@@ -676,7 +676,7 @@
          <section class="main__contactus container">
             <h2 class="main__contactus-title">Мы всегда вам рады!</h2>
             <div class="main__contactus-content">
-               <form action="mail.php" enctype="multipart/form-data" class="main__contactus-form js-form" method="POST">
+               <form action="mail.php" enctype="multipart/form-data" class="call-form js-form" method="POST">
                   <input class="visually-hidden" name="admin_email[]" value="ohthatorh@yandex.ru">
                   <input class="visually-hidden" name="form_subject" value="Заказать звонок">
                   <p class="main__contactus-content-text">
@@ -685,22 +685,22 @@
                      </span>
                   </p>
                   <div class="just-validate-tooltip-container">
-                     <input class="main__contactus-form-input" id="name" name="name" type="text" placeholder="Как вас зовут?" data-validate-field="name">
+                     <input class="call-form-input" id="name" name="name" type="text" placeholder="Как вас зовут?" data-validate-field="name">
                   </div>
                   <div class="just-validate-tooltip-container">
-                     <input class="main__contactus-form-input" id="tel" name="tel" type="tel" placeholder="Ваш телефон" data-validate-field="tel">
+                     <input class="call-form-input" id="tel" name="tel" type="tel" placeholder="Ваш телефон" data-validate-field="tel">
                   </div>
                   <div class="just-validate-tooltip-container">
-                     <input class="main__contactus-form-input" id="email" name="email" type="email" placeholder="Ваш e-mail" data-validate-field="email">
+                     <input class="call-form-input" id="email" name="email" type="email" placeholder="Ваш e-mail" data-validate-field="email">
                   </div>
-                  <button class="main__contactus-form-button">
+                  <button class="call-form-button">
                   Отправить
                   </button>
                   <div class="just-validate-tooltip-container">
-                     <label class="main__contactus-form-checkbox checkbox__label">
+                     <label class="call-form-checkbox checkbox__label">
                      <input type="checkbox" name="checkbox" class="checkbox visually-hidden" checked required data-validate-field="checkbox">
                      <span class="checkbox__span">    
-                     Принимаю&nbsp;<a href="#" class="main__contactus-form-checkbox-link">пользовательское соглашение</a>
+                     Принимаю&nbsp;<a href="#" class="call-form-checkbox-link">пользовательское соглашение</a>
                      </span>
                      </label>
                   </div>
@@ -821,6 +821,7 @@
       <script src="scripts/addons/gsap.min.js"></script>
       <script src="scripts/addons/inputmask.min.js"></script>
       <script src="scripts/header.js"></script>
+      <script src="scripts/form.js"></script>
       <script src="scripts/index.js"></script>
    </body>
 </html>

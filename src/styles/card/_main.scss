@@ -4,10 +4,10 @@
         padding: 26px 0 19px 0;
     }
     @media only screen and (max-width: 1024px) {
-        padding: 28px 0 22px 0;
+        padding: 26px 0 21px 0;
     }
     @media only screen and (max-width: 768px) {
-        padding: 22px 0 36px 0;
+        padding: 22px 0 32px 0;
     }
 }
 .main {
@@ -42,33 +42,6 @@
                         &:not(:last-child) {
                             margin-right: 34px;
                         }
-                    }
-                }
-                .modal-close {
-                    display: none;
-                }
-                &.img-active {
-                    padding-top: 50px;
-                    width: 1280px;
-                    position: fixed;
-                    left: 50%;
-                    top: 50%;
-                    transform: translate(-50%, -50%);
-                    background-color: $whiteColor;
-                    border-radius: 10px;
-                    z-index: 2;
-                    .main__card-product-images-img {
-                        display: block;
-                        width: 1065px;
-                        margin: 0 auto;
-                    }
-                    .main__card-product-images-wrap {
-                        display: flex;
-                        justify-content: space-evenly;
-                        border-radius: 0 0 10px 10px;
-                    }
-                    .modal-close {
-                        display: block;
                     }
                 }
             }
@@ -213,20 +186,12 @@
         top: 0;
         left: 0;
         background-color: rgba(0, 0, 0, 0.4);
-        z-index: 1;
+        z-index: 3;
     }
     &__window {
-        position: fixed;
-        display: none;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
         padding: 30px;
         width: 624px;
         height: 421px;
-        border-radius: 10px;
-        background-color: $whiteColor;
-        z-index: 2;
         .call-form {
             &-title {
                 margin-bottom: 4px;
@@ -238,6 +203,111 @@
                 line-height: 19px;
             }
         }
+        @media only screen and (max-width: 768px) {
+            width: 296px;
+            padding: 30px 16px;
+            .call-form {
+                &-text {
+                    width: 100%;
+                    margin-bottom: 16px;
+                }
+                &-title {
+                    margin-bottom: 8px;
+                }
+                &-button {
+                    padding: 19px 35px;
+                    font-weight: 600;
+                    margin-bottom: 12px;
+                }
+                &-checkbox {
+                    &.checkbox__label {
+                        padding-left: 15px;
+                        font-size: 12px;
+                    }
+                    .checkbox__span {
+                        &::before {
+                            width: 12px;
+                            height: 12px;
+                        }
+                        &::after {
+                            left: 5px;
+                            top: 2px;
+                            width: 3px;
+                            height: 7px;
+                        }
+                    }
+                }
+                .just-validate-tooltip-container {
+                    margin-bottom: 16px;
+                }
+            }
+        }
+    }
+    &__photo {
+        .form-modal-images {
+            width: 1280px;
+            top: 61%;
+            padding-top: 50px;
+            .form-modal-img {
+                width: 100%;
+                display: block;
+                margin: 0 auto;
+                margin-bottom: 50px;
+                @media only screen and (max-width: 1366px) {
+                    width: 89%;
+                }
+            }
+            &-wrap {
+                padding: 20px 108px;
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                background-color: $greyLightColor;
+                border-radius: 0 0 10px 10px;
+                @media only screen and (max-width: 1366px) {
+                    padding: 20px 67px;
+                }
+                @media only screen and (max-width: 1024px) {
+                    padding: 20px 79px;
+                    overflow-y: hidden;
+                    .form-modal-wrap-img {
+                        width: 70%;
+                        &:not(:last-child) {
+                            margin-right: 78px;
+                        }
+                    }
+                }
+                @media only screen and (max-width: 768px) {
+                    padding: 16px 62px;
+                    .form-modal-wrap-img {
+                        width: 100%;
+                        &:not(:last-child) {
+                            margin-right: 78px;
+                        }
+                    }
+                }
+            }
+            @media only screen and (max-width: 1366px) {
+                width: 952px;
+            }
+            @media only screen and (max-width: 1024px) {
+                width: 624px;
+            }
+            @media only screen and (max-width: 768px) {
+                width: 296px;
+            }
+        }
+    }
+    &__window,
+    &__photo {
+        position: fixed;
+        display: none;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 10px;
+        background-color: $whiteColor;
+        z-index: 4;
     }
 }
 
@@ -245,17 +315,30 @@
     .main {
         &__card {
             &-product {
+                margin-bottom: 68px;
+                &-body {
+                    margin-bottom: 35px;
+                }
                 &-images {
                     width: 100%;
                     &-wrap {
-                        padding: 11px;
+                        padding: 11px 11px 7px;
+                        max-width: 516px;
+                        display: flex;
+                        overflow-y: hidden;
+                        &-img {
+                            &:not(:last-child) {
+                                margin-right: 38px;
+                            }
+                        }
                     }
                 }
                 &-info {
                     min-width: 407px;
+                    padding-top: 15px;
                 }
                 &-title {
-                    margin-bottom: 6px;
+                    margin-bottom: 4px;
                 }
                 &-text {
                     margin-bottom: 23px;
@@ -267,6 +350,216 @@
                 &-price {
                     margin-bottom: 24px;
                 }
+                &-description {
+                    &-left {
+                        width: 100%;
+                        &-title {
+                            margin-bottom: 6px;
+                            font-size: 16px;
+                        }
+                    }
+                    &-right {
+                        padding-top: 6px;
+                        min-width: 407px;
+                        .feature {
+                            &-right {
+                                width: 54%;
+                            }
+                            &-left {
+                                width: 44%;
+                            }
+                        }
+                    }
+                    &-images {
+                        padding-top: 73px;
+                    }
+                    &-img {
+                        &:not(:last-child) {
+                            margin-right: 17px;
+                        }
+                    }
+                }
+            }
+            &-analogs {
+                &-title {
+                    margin-bottom: 25px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .main {
+        &__card {
+            &-product {
+                margin-bottom: 34px;
+                &-rate {
+                    margin-bottom: 4px;
+                }
+                &-title {
+                    margin-bottom: 6px;
+                }
+                &-body {
+                    margin-bottom: 81px;
+                    position: relative;
+                    flex-direction: column;
+                }
+                &-info {
+                    min-width: 405px;
+                    align-self: flex-end;
+                }
+                &-images {
+                    margin-bottom: 56px;
+                    &-wrap {
+                        padding: 23px 25px 27px;
+                        position: absolute;
+                        bottom: -50px;
+                        left: 0;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        &-img {
+                            &:not(:last-child) {
+                                margin-right: 0;
+                                margin-bottom: 18px;
+                            }
+                        }
+                    }
+                }
+                &-description {
+                    flex-direction: column;
+                    &-left {
+                        width: 84%;
+                        margin-bottom: 27px;
+                        &-title {
+                            margin-bottom: 8px;
+                        }
+                    }
+                    &-images {
+                        padding-top: 22px;
+                    }
+                    &-right {
+                        width: 100%;
+                        padding-top: 6px;
+                        .feature {
+                            &-left {
+                                width: 64%;
+                            }
+                            &-right {
+                                width: 35%;
+                            }        
+                        }   
+                    }
+                }
+                &-text {
+                    margin-bottom: 22px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .main {
+        &__card {
+            &-product {
+                margin-bottom: 70px;
+                &-body {
+                    margin-bottom: 34px;
+                }
+                &-rate {
+                    margin-bottom: 3px;
+                }
+                &-images {
+                    margin-bottom: 2px;
+                    &-wrap {
+                        padding: 10px;
+                        position: unset;
+                        flex-direction: row;
+                        overflow-y: hidden;
+                        &-img {
+                            &:not(:last-child) {
+                                margin-bottom: 0;
+                                margin-right: 38px;
+                            }
+                        }
+                    }
+                    &-img {
+                        margin-bottom: 13px;
+                    }
+                }
+                &-info {
+                    padding-top: 17px;
+                    min-width: 100%;
+                }
+                &-title {
+                    margin-bottom: 8px;
+                    font-size: 16px;
+                }
+                &-text {
+                    width: 68%;
+                    margin-bottom: 18px;
+                    line-height: 15px;
+                    font-size: 14px;
+                }
+                &-price {
+                    margin-bottom: 16px;
+                    font-size: 24px;
+                }
+                &-btn,
+                &-add {
+                    width: 100%;
+                }
+                &-description {
+                    &-left {
+                        width: 100%;
+                        margin-bottom: 24px;
+                        &-title {
+                            margin-bottom: 6px;
+                            font-size: 15px;
+                        }
+                    }
+                    &-images {
+                        padding-top: 25px;
+                        display: flex;
+                    }
+                    &-img {
+                        width: 47%;
+                    }
+                    &-right {
+                        min-width: 100%;
+                        .feature {
+                            li {
+                                &:not(:last-child) {
+                                    margin-bottom: 4.2px;
+                                }
+                            }
+                            &-left {
+                                width: 100%;
+                                font-size: 10px;
+                                &::after {
+                                    display: none;
+                                }
+                            }
+                            &-right {
+                                width: 100%;
+                                margin-left: 0;
+                                padding-left: 0;
+                            }        
+                        }   
+                    }
+                }
+            }
+            &-swiper {
+                &-nav {     
+                    top: unset;
+                    bottom: -48px;
+                    right: 37%;
+                }
+            }
+            &-content {
+                padding-bottom: 118px;
             }
         }
     }

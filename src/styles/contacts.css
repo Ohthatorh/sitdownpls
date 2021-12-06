@@ -72,6 +72,9 @@ html {
 }
 
 .main-product-item {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
   padding-top: 75px;
   position: relative;
   background-color: #F6F6F6;
@@ -448,6 +451,7 @@ html {
   width: 25px;
   height: 25px;
   background-color: transparent;
+  z-index: 4;
 }
 
 .modal-close::before, .modal-close::after {
@@ -1100,7 +1104,7 @@ html {
 .header .hamburger {
   display: none;
   padding: 0;
-  z-index: 5;
+  z-index: 3;
 }
 
 .header .hamburger-box {

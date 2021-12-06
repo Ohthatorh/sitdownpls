@@ -77,5 +77,16 @@ searchItemsMap.forEach(el => {
     })
 })
 searchInputMap.addEventListener('input', () => {
-    (searchInputMap.value.length === 0) ? searchResultMap.classList.remove('search-active') : searchResultMap.classList.add('search-active')
+    if (searchInputMap.value.length === 0) {
+        searchResultMap.classList.remove('search-active')
+    } else {
+        searchResultMap.classList.add('search-active')
+        searchItemsMap.forEach(el => {
+            if (el.children[0].textContent.trim().toUpperCase().indexOf(searchInputMap.value.toUpperCase()) >= 0 || el.children[1].textContent.trim().toUpperCase().indexOf(searchInputMap.value.toUpperCase()) >= 0) {
+                el.style.display = 'block'
+            } else {
+                el.style.display = 'none'
+            }            
+        })
+    }
 })

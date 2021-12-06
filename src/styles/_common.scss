@@ -43,6 +43,7 @@ html {
 }
 
 .main-product-item {
+    @include stylesForList;
     padding-top: 75px;
     position: relative;
     background-color: $greyLightColor;
@@ -226,4 +227,5 @@ html {
     &::after {
         transform: rotate(-45deg);
     }
+    z-index: 4;
 }

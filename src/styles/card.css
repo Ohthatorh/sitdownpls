@@ -72,9 +72,6 @@ html {
 }
 
 .main-product-item {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
   padding-top: 75px;
   position: relative;
   background-color: #F6F6F6;
@@ -1717,6 +1714,12 @@ html {
   margin-right: 10px;
 }
 
+.main__card-swiper .swiper-wrapper {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
 .form-modal-overlay {
   display: none;
   position: fixed;
@@ -1732,6 +1735,7 @@ html {
   padding: 30px;
   width: 624px;
   height: 421px;
+  position: relative;
 }
 
 .form-modal__window .call-form-title {
@@ -1743,6 +1747,32 @@ html {
   margin-bottom: 29px;
   font-size: 14px;
   line-height: 19px;
+}
+
+.form-modal__window .success-wrap {
+  display: none;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.form-modal__window .success-wrap-img {
+  margin: 0 auto;
+  display: block;
+}
+
+.form-modal__window .success-wrap-text {
+  font-size: 32px;
+  text-align: center;
+}
+
+.form-modal__window .success-wrap.success {
+  display: block;
 }
 
 @media only screen and (max-width: 768px) {
@@ -1778,6 +1808,15 @@ html {
   }
   .form-modal__window .call-form .just-validate-tooltip-container {
     margin-bottom: 16px;
+  }
+  .form-modal__window .success-wrap {
+    width: auto;
+  }
+  .form-modal__window .success-wrap-text {
+    font-size: 16px;
+  }
+  .form-modal__window .success-wrap-img {
+    width: 75px;
   }
 }
 

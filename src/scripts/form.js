@@ -48,7 +48,10 @@ new JustValidate('.js-form', {
         xhr.onreadystatechange = function() {
             if (xhr.readyState === 4) {
                 if (xhr.status === 200) {
-                   console.log('success')
+                    const successForm = document.querySelector('.success-wrap')
+                    const callForm = document.querySelector('.call-form')
+                    callForm.remove()
+                    successForm.classList.add('success')
                 }
             }
         }

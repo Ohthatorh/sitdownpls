@@ -73,9 +73,6 @@ html {
 }
 
 .main-product-item {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
   padding-top: 75px;
   position: relative;
   background-color: #F6F6F6;

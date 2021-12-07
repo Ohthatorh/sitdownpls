@@ -105,6 +105,9 @@
             &::placeholder {
                 color: $greyColor;
             }
+            &.warning {
+                border: 1px solid $redInputColor;
+            }
         }
         &-search {
             @include stylesForList;

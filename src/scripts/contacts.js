@@ -34,49 +34,57 @@ function init(){
 }
 const searchInputMap = document.querySelector('.main__contacts-input')
 const searchResultMap = document.querySelector('.main__contacts-search')
-let getCoordinates
+let coordinates
+let selectedItem
 const searchButtonMap = document.querySelector('.main__contacts-button')
 searchButtonMap.addEventListener('click', e => {
     e.preventDefault()
     if (searchInputMap.value !== '') {
-        map.geoObjects.removeAll()
-        map.setCenter(getCoordinates)
-        const newPlacemark = new ymaps.Placemark(getCoordinates, {
-            balloonContentHeader: `
-            <h3 class="map-header-title">SitDownPls на Солянке</h3>
-            <p class="map-header-description">м. Китай-город, ул. Солянка, д.24</p>
-            <a href="tel:84958854547" class="map-header-tel">
-                <svg width="18" height="18" viewBox="0 0 18 18">
-                    <use xlink:href="img/sprite.svg#phone-svg" id="phone-svg" fill="#FF862F"></use>
-                </svg>
-                +7 (495) 885-45-47
-            </a>
-        `,
-        balloonContentBody: `
-            <p class="map-body-text"><span class="span-text">Часы работы:</span> с 10:00 до 21:00</p>
-        `,
-        balloonContentFooter: `
-            <p class="map-footer-text"><span class="span-text">Что здесь:</span> шоурум, пункт отгрузки, пункт выдачи, пункт обмена-возврата, сервисный центр</p>
-        `
-        }, {
-            iconLayout: 'default#image',
-            iconImageHref: '../img/favicon.svg',
-            iconImageSize: [30, 45],
-            iconImageOffset: [-3, -42]
-        })
-        map.geoObjects.add(newPlacemark)
-        newPlacemark.balloon.open()
+        if (selectedItem) {
+            map.geoObjects.removeAll()
+            map.setCenter(coordinates)
+            const newPlacemark = new ymaps.Placemark(coordinates, {
+                balloonContentHeader: `
+                <h3 class="map-header-title">${selectedItem.children[0].textContent.split(',')[1]}</h3>
+                <p class="map-header-description">${selectedItem.children[1].textContent}</p>
+                <a href="tel:84958854547" class="map-header-tel">
+                    <svg width="18" height="18" viewBox="0 0 18 18">
+                        <use xlink:href="img/sprite.svg#phone-svg" id="phone-svg" fill="#FF862F"></use>
+                    </svg>
+                    +7 (495) 885-45-47
+                </a>
+            `,
+            balloonContentBody: `
+                <p class="map-body-text"><span class="span-text">Часы работы:</span> с 10:00 до 21:00</p>
+            `,
+            balloonContentFooter: `
+                <p class="map-footer-text"><span class="span-text">Что здесь:</span> шоурум, пункт отгрузки, пункт выдачи, пункт обмена-возврата, сервисный центр</p>
+            `
+            }, {
+                iconLayout: 'default#image',
+                iconImageHref: '../img/favicon.svg',
+                iconImageSize: [30, 45],
+                iconImageOffset: [-3, -42]
+            })
+            map.geoObjects.add(newPlacemark)
+            newPlacemark.balloon.open()
+        } else {
+            searchInputMap.classList.add('warning')
+        }
     }
 })
+
 const searchItemsMap = document.querySelectorAll('.main__contacts-search-item')
 searchItemsMap.forEach(el => {
     el.addEventListener('click', () => {
         searchInputMap.value = el.children[0].textContent.trim()
         searchResultMap.classList.remove('search-active')
-        getCoordinates = el.dataset.coord.split(',')
+        coordinates = el.dataset.coord.split(',')
+        selectedItem = el
     })
 })
 searchInputMap.addEventListener('input', () => {
+    searchInputMap.classList.remove('warning')
     if (searchInputMap.value.length === 0) {
         searchResultMap.classList.remove('search-active')
     } else {

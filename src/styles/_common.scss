@@ -43,7 +43,6 @@ html {
 }
 
 .main-product-item {
-    @include stylesForList;
     padding-top: 75px;
     position: relative;
     background-color: $greyLightColor;
